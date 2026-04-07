@@ -206,7 +206,7 @@ export default function HomePage() {
 
           <p className="hero-badge hero-animate hero-animate--1">
             <span className="hero-badge__dot" aria-hidden="true" />
-            Product engineering partner · Vancouver
+            Product engineering partner
           </p>
 
           <h1 className="hero-title hero-animate hero-animate--2">
@@ -277,13 +277,13 @@ export default function HomePage() {
           <div className="ai-intro">
             <p className="eyebrow">AI-accelerated delivery</p>
             <h2 className="ai-intro__title">
-              We don&apos;t fight AI.<br />We run on it.
+              AI Native Engineering
             </h2>
             <p className="ai-intro__sub">
-              AI hasn&apos;t replaced good engineering judgment. It&apos;s amplified it.
-              Every engagement is AI-augmented from discovery to launch. Not bolted on
-              at the end — baked into how we work from day one. The result is faster
-              delivery, fewer surprises, and a codebase that holds up.
+              We use AI to accelerate our engineering process. From discovery to launch,
+              every engagement is AI-augmented. Not bolted on at the end — baked into how
+              we work from day one. The result is faster delivery, fewer surprises, and a
+              codebase that holds up.
             </p>
           </div>
 
@@ -405,7 +405,7 @@ export default function HomePage() {
             <div>
               <p className="site-footer__brand">Tosh Labs</p>
               <p className="site-footer__tagline">
-                Product engineering partner · Vancouver, BC
+                Product engineering partner
               </p>
             </div>
           </div>
