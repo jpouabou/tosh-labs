@@ -193,7 +193,7 @@ export default function HomePage() {
           </h1>
 
           <p className="hero-lede hero-animate hero-animate--3">
-            We help startups validate ideas, build production-ready products, and scale
+            We help startups and teams validate ideas, build production-ready products, and scale
             their systems. Not as a vendor executing your tickets. As a partner invested
             in what you&apos;re building.
           </p>
@@ -258,7 +258,7 @@ export default function HomePage() {
             </h2>
             <p className="ai-intro__sub">
               We use AI to accelerate our engineering process. From discovery to launch,
-              every engagement is AI-augmented. Not bolted on at the end — baked into how
+              every engagement is AI-augmented. Not bolted on at the end, baked into how
               we work from day one. The result is faster delivery, fewer surprises, and a
               codebase that holds up.
             </p>
