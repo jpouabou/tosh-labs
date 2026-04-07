@@ -11,25 +11,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://toshlabs.co"),
-  title: "Tosh Labs | SaaS & Custom Software for Businesses",
+  title: "Tosh Labs | Product Engineering Partner for Startups",
   description:
-    "Vancouver-based tech company building SaaS products and custom web & mobile applications for ambitious businesses. Portfolio: Pulsr and Pausr.",
+    "Tosh Labs helps startups and teams turn ideas into scalable products — from rapid prototypes to production-ready systems and ongoing technical leadership.",
   openGraph: {
-    title: "Tosh Labs",
+    title: "Tosh Labs | From Idea to Scalable Product",
     description:
-      "We build SaaS products and custom software — web and mobile apps for businesses that need software as serious as the work it powers.",
+      "We partner with startups and teams to validate, build, and scale software — without costly rebuilds. Products: Pulsr and Pausr.",
     url: "https://toshlabs.co",
     siteName: "Tosh Labs",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tosh Labs",
+    title: "Tosh Labs | Product Engineering Partner",
     description:
-      "Premium software corporation. SaaS portfolio: Pulsr & Pausr. Custom applications and enterprise delivery.",
+      "We help you build the right product — and scale it properly. Prototype, product build, and fractional CTO support.",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
