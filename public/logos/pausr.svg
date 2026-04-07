@@ -1,0 +1,11 @@
+<svg width="240" height="66" viewBox="185 65 240 66" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-letter { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 58px; fill: #e4e4e7; }
+  </style>
+  <text class="logo-letter" x="198" y="97" dominant-baseline="central">P</text>
+  <text class="logo-letter" x="242" y="97" dominant-baseline="central">a</text>
+  <rect x="291" y="82" width="15" height="35" rx="6" fill="#fafafa"/>
+  <rect x="316" y="82" width="15" height="35" rx="6" fill="#fafafa"/>
+  <text class="logo-letter" x="344" y="97" dominant-baseline="central">s</text>
+  <text class="logo-letter" x="390" y="97" dominant-baseline="central">r</text>
+</svg>
