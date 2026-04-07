@@ -82,30 +82,17 @@ h3 {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   flex-shrink: 0;
 }
-.brand__mark {
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
-  background: linear-gradient(145deg, #0d0d0d 0%, #555555 100%);
-  flex-shrink: 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-.brand__mark--sm {
-  width: 26px;
-  height: 26px;
-  border-radius: 8px;
-  background: linear-gradient(145deg, #0d0d0d 0%, #555555 100%);
-  flex-shrink: 0;
-}
-.brand__name {
-  margin: 0;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
+.brand__logo {
+  height: 34px;
+  width: auto;
+  display: block;
   color: var(--text);
+}
+.brand__logo--footer {
+  height: 30px;
+  margin-bottom: 8px;
 }
 
 /* ── NAV ── */
@@ -134,6 +121,102 @@ h3 {
 .nav-external { width: 13px; height: 13px; opacity: 0.4; }
 .topbar__nav a:hover .nav-external { opacity: 0.7; }
 .topbar__cta { flex-shrink: 0; }
+
+/* Services dropdown trigger — looks like a nav link */
+.topbar__nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 13px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: default;
+  user-select: none;
+  transition: color 0.2s var(--ease-out), background 0.2s var(--ease-out);
+}
+.topbar__chevron {
+  opacity: 0.5;
+  transition: transform 0.2s var(--ease-out), opacity 0.2s;
+}
+
+/* Dropdown wrap — CSS-only hover */
+.topbar__dropdown-wrap {
+  position: relative;
+  /* padding-bottom bridges the gap so hover stays alive while moving to panel */
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+}
+.topbar__dropdown-wrap:hover .topbar__nav-btn,
+.topbar__dropdown-wrap:focus-within .topbar__nav-btn {
+  color: var(--text);
+  background: var(--dim-2);
+}
+.topbar__dropdown-wrap:hover .topbar__chevron,
+.topbar__dropdown-wrap:focus-within .topbar__chevron {
+  transform: rotate(180deg);
+  opacity: 0.8;
+}
+
+/* Dropdown panel — hidden by default, shown on hover */
+.topbar__dropdown {
+  position: absolute;
+  top: 100%;           /* sits flush at bottom of wrap (gap covered by padding-bottom) */
+  left: 0;
+  min-width: 240px;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 6px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  /* hidden state */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.18s var(--ease-out),
+    transform 0.18s var(--ease-out);
+}
+.topbar__dropdown-wrap:hover .topbar__dropdown,
+.topbar__dropdown-wrap:focus-within .topbar__dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.topbar__dropdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  transition: background 0.15s;
+  color: var(--text);
+}
+.topbar__dropdown-item:hover { background: var(--dim-2); }
+.topbar__dropdown-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+.topbar__dropdown-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Footer external link */
+.footer-external {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
 
 /* ── BUTTONS ── */
 .button {
@@ -538,17 +621,16 @@ h3 {
   gap: 4px;
   font-size: 0.8125rem;
   font-weight: 500;
-  color: var(--soft);
+  color: #ffffff;
   padding: 5px 12px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-2);
-  background: var(--dim);
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  border: none;
+  background: #000000;
+  transition: filter 0.2s, box-shadow 0.2s;
 }
 .product-card__external:hover {
-  background: var(--dim-2);
-  border-color: var(--border-3);
-  color: var(--text);
+  filter: brightness(1.25);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
 }
 .product-card__eyebrow {
   position: relative;

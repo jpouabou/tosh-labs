@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import { IconBox } from "@/components/IconBox";
 import ProductCard from "@/components/ProductCard";
+import Topbar from "@/components/Topbar";
+import Footer from "@/components/Footer";
 
 const services = [
   {
@@ -127,7 +129,7 @@ const differentiators = [
 ];
 
 const stats = [
-  { value: "Weeks", label: "Idea to prototype" },
+  { value: "1-3 Weeks", label: "Idea to prototype" },
   { value: "2", label: "Live products we operate" },
   { value: "CTO-level", label: "Strategic oversight" },
   { value: "Global", label: "Clients" },
@@ -170,34 +172,9 @@ const products = [
 
 export default function HomePage() {
   return (
-    <main className="page-shell">
-
-      {/* ── NAV ── */}
-      <header className="topbar">
-        <div className="topbar__inner container">
-          <a className="brand" href="#top" aria-label="Tosh Labs home">
-            <div className="brand__mark" aria-hidden="true" />
-            <p className="brand__name">Tosh Labs</p>
-          </a>
-
-          <nav className="topbar__nav" aria-label="Primary">
-            <a href="#services">Services</a>
-            <a href="#ai">AI</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#process">Process</a>
-            <a href="https://www.usepulsr.com" target="_blank" rel="noopener noreferrer">
-              Pulsr <ArrowUpRight className="nav-external" aria-hidden />
-            </a>
-            <a href="https://www.usepausr.com" target="_blank" rel="noopener noreferrer">
-              Pausr <ArrowUpRight className="nav-external" aria-hidden />
-            </a>
-          </nav>
-
-          <a className="button button--accent topbar__cta" href="mailto:hello@toshlabs.com">
-            Start a project
-          </a>
-        </div>
-      </header>
+    <>
+      <Topbar />
+      <main className="page-shell">
 
       {/* ── HERO ── */}
       <section className="hero-section" id="top">
@@ -277,7 +254,7 @@ export default function HomePage() {
           <div className="ai-intro">
             <p className="eyebrow">AI-accelerated delivery</p>
             <h2 className="ai-intro__title">
-              AI Native Engineering
+              AI-First Engineering
             </h2>
             <p className="ai-intro__sub">
               We use AI to accelerate our engineering process. From discovery to launch,
@@ -397,49 +374,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="site-footer">
-        <div className="container site-footer__inner">
-          <div className="site-footer__brand-block">
-            <div className="brand__mark brand__mark--sm" aria-hidden="true" />
-            <div>
-              <p className="site-footer__brand">Tosh Labs</p>
-              <p className="site-footer__tagline">
-                Product engineering partner
-              </p>
-            </div>
-          </div>
 
-          <nav className="site-footer__nav" aria-label="Footer">
-            <div className="site-footer__col">
-              <p className="site-footer__col-heading">Company</p>
-              <a href="#services">Services</a>
-              <a href="#ai">AI approach</a>
-              <a href="#portfolio">Portfolio</a>
-              <a href="#process">Process</a>
-              <a href="#contact">Contact</a>
-            </div>
-            <div className="site-footer__col">
-              <p className="site-footer__col-heading">Products</p>
-              <a href="https://www.usepulsr.com" target="_blank" rel="noopener noreferrer">
-                Pulsr
-              </a>
-              <a href="https://www.usepausr.com" target="_blank" rel="noopener noreferrer">
-                Pausr
-              </a>
-            </div>
-            <div className="site-footer__col">
-              <p className="site-footer__col-heading">Contact</p>
-              <a href="mailto:hello@toshlabs.com">hello@toshlabs.com</a>
-            </div>
-          </nav>
-        </div>
-
-        <div className="container site-footer__bottom">
-          <p>© 2026 Tosh Labs. All rights reserved.</p>
-        </div>
-      </footer>
-
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

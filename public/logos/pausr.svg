@@ -1,11 +1,14 @@
-<svg width="240" height="66" viewBox="185 65 240 66" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .logo-letter { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 58px; fill: #e4e4e7; }
-  </style>
-  <text class="logo-letter" x="198" y="97" dominant-baseline="central">P</text>
-  <text class="logo-letter" x="242" y="97" dominant-baseline="central">a</text>
-  <rect x="291" y="82" width="15" height="35" rx="6" fill="#fafafa"/>
-  <rect x="316" y="82" width="15" height="35" rx="6" fill="#fafafa"/>
-  <text class="logo-letter" x="344" y="97" dominant-baseline="central">s</text>
-  <text class="logo-letter" x="390" y="97" dominant-baseline="central">r</text>
+<svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pauseGradientDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#86EFAC"/>
+      <stop offset="100%" style="stop-color:#22C55E"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="27" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="26" font-weight="600" fill="#0f172a">P</text>
+  <text x="22" y="27" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="26" font-weight="600" fill="#0f172a">a</text>
+  <rect x="44" y="13" width="6" height="14" rx="1.5" fill="url(#pauseGradientDark)"/>
+  <rect x="54" y="13" width="6" height="14" rx="1.5" fill="url(#pauseGradientDark)"/>
+  <text x="70" y="27" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="26" font-weight="600" fill="#0f172a">s</text>
+  <text x="92" y="27" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="26" font-weight="600" fill="#0f172a">r</text>
 </svg>
