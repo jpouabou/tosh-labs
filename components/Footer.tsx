@@ -8,7 +8,10 @@ export default function Footer() {
       <div className="container site-footer__inner">
         <div className="site-footer__brand-block">
           <div>
-            <BrandLogo className="brand__logo brand__logo--footer" />
+            <div className="brand__lockup--footer">
+              <BrandLogo className="brand__logo brand__logo--footer" />
+              <span className="brand__wordmark">Tosh Labs</span>
+            </div>
             <p className="site-footer__tagline">Product engineering partner</p>
           </div>
         </div>

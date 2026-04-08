@@ -16,6 +16,8 @@
   --shadow-hover: 0 8px 28px rgba(0,0,0,0.12), 0 24px 64px rgba(0,0,0,0.09);
   --green-dim:    rgba(22, 163, 74, 0.1);
   --green-border: rgba(22, 163, 74, 0.22);
+  /* Logo: L stroke vs T (uses --bg) on dark mark */
+  --logo-l-stroke: #94a3b8;
   --radius-sm: 999px;
   --radius-md: 12px;
   --radius-lg: 18px;
@@ -82,17 +84,36 @@ h3 {
 .brand {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
   flex-shrink: 0;
 }
 .brand__logo {
   height: 34px;
-  width: auto;
+  width: 34px;
+  flex-shrink: 0;
   display: block;
   color: var(--text);
 }
+.brand__wordmark {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1;
+}
 .brand__logo--footer {
   height: 30px;
-  margin-bottom: 8px;
+  width: 30px;
+  margin-bottom: 0;
+}
+.brand__lockup--footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.brand__lockup--footer .brand__wordmark {
+  font-size: 1rem;
 }
 
 /* ── NAV ── */

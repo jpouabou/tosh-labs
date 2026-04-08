@@ -15,6 +15,7 @@ export default function Topbar() {
       <div className="topbar__inner container">
         <a className="brand" href="/" aria-label="Tosh Labs home">
           <BrandLogo />
+          <span className="brand__wordmark">Tosh Labs</span>
         </a>
 
         <nav className="topbar__nav" aria-label="Primary">

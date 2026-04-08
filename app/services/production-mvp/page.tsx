@@ -59,33 +59,62 @@ const includes = [
   },
 ];
 
-const retainerFeatures = [
-  "Unlimited project initiations",
-  "Dedicated engineering capacity per active sprint",
-  "AI-accelerated delivery on every build",
-  "Production-grade architecture, always",
-  "Priority access — no waitlist",
-  "Cancel anytime",
+const pricingTiers = [
+  {
+    name: "Standard MVP",
+    price: "From $18,000",
+    duration: "4–6 weeks",
+    description:
+      "A focused web application with your core feature set. Right-sized for founders who have validated their idea and need to ship something real without over-engineering it.",
+    includes: [
+      "UX design & user flows",
+      "Full-stack web application",
+      "Production infrastructure & CI/CD",
+      "Unit + integration test coverage",
+      "Deployment & launch support",
+      "Handoff documentation",
+    ],
+    featured: false,
+    cta: "Start a Standard MVP",
+  },
+  {
+    name: "Extended MVP",
+    price: "From $35,000",
+    duration: "8–12 weeks",
+    description:
+      "For products that need more: mobile apps, third-party integrations, complex data models, or multiple user roles. Still built to ship, not to over-engineer.",
+    includes: [
+      "Everything in Standard MVP",
+      "Web + mobile (React Native or native)",
+      "Third-party integrations (payments, auth, APIs)",
+      "Complex data model & multi-role access",
+      "End-to-end test suite",
+      "Performance optimization",
+      "Extended onboarding & handoff",
+    ],
+    featured: true,
+    cta: "Start an Extended MVP",
+  },
 ];
 
 const trustItems = [
   {
     icon: RefreshCw,
-    title: "Unlimited projects",
+    title: "Fixed-price engagements",
     description:
-      "No cap on the number of MVPs. Have an idea? We spin it up.",
+      "Scope is agreed upfront. No hourly billing surprises, no change-order games. You know what you're paying before a line of code is written.",
   },
   {
     icon: Clock,
     title: "No long-term lock-in",
     description:
-      "Month-to-month. Stay because the value is real, not because you're locked in.",
+      "Project-based by default. If you want ongoing sprint capacity afterward, we offer a monthly retainer — but it's never a requirement.",
   },
   {
     icon: TrendingUp,
     title: "Scales with you",
     description:
-      "As your company grows, so does our engagement. From MVP to scale, we're still there.",
+      "Built to hand off cleanly. If your next step is hiring engineers or scaling the architecture, the codebase we deliver supports both.",
   },
 ];
 
@@ -174,16 +203,16 @@ export default function ProductionMVPPage() {
             </div>
             <div className="mvp-hero__stats" aria-label="At a glance">
               <div className="mvp-hero__stat">
-                <span className="mvp-hero__stat-value">2–8 Weeks</span>
+                <span className="mvp-hero__stat-value">From $18,000</span>
+                <span className="mvp-hero__stat-label">Fixed-price project</span>
+              </div>
+              <div className="mvp-hero__stat">
+                <span className="mvp-hero__stat-value">4–12 Weeks</span>
                 <span className="mvp-hero__stat-label">To production</span>
               </div>
               <div className="mvp-hero__stat">
-                <span className="mvp-hero__stat-value">Production-grade</span>
-                <span className="mvp-hero__stat-label">From commit one</span>
-              </div>
-              <div className="mvp-hero__stat">
-                <span className="mvp-hero__stat-value">AI-accelerated</span>
-                <span className="mvp-hero__stat-label">Delivery</span>
+                <span className="mvp-hero__stat-value">No rewrites</span>
+                <span className="mvp-hero__stat-label">Production-grade always</span>
               </div>
             </div>
           </div>
@@ -211,42 +240,71 @@ export default function ProductionMVPPage() {
           </div>
         </section>
 
-        {/* ── RETAINER ── */}
+        {/* ── PRICING ── */}
         <section className="mvp-retainer-section" id="retainer">
           <div className="mvp-retainer-section__glow" aria-hidden="true" />
           <div className="container mvp-retainer-section__inner">
 
             <header className="mvp-retainer-header">
-              <p className="eyebrow mvp-eyebrow--dark">The retainer model</p>
-              <h2 className="mvp-retainer-title">Unlimited MVPs. $99/month.</h2>
+              <p className="eyebrow mvp-eyebrow--dark">Pricing</p>
+              <h2 className="mvp-retainer-title">Fixed-price. No surprises.</h2>
               <p className="mvp-retainer-sub">
-                Most product studios charge per project. We operate on a retainer. For $99/month,
-                your company gets unlimited access to our MVP delivery engine — spin up as many
-                products as you need, whenever you need them. We&apos;re betting on long-term
-                partnerships, not one-time engagements.
+                Every engagement is scoped and priced before work begins. You know exactly
+                what you&apos;re getting and what you&apos;re paying. No hourly billing,
+                no change orders, no last-minute scope creep.
               </p>
             </header>
 
-            <div className="retainer-card">
-              <div className="retainer-card__price-row">
-                <span className="retainer-card__price">$99</span>
-                <span className="retainer-card__per">/month</span>
+            <div className="mvp-tier-grid">
+              {pricingTiers.map((tier) => (
+                <div
+                  key={tier.name}
+                  className={`mvp-tier-card${tier.featured ? " mvp-tier-card--featured" : ""}`}
+                >
+                  {tier.featured && (
+                    <span className="mvp-tier-card__badge">Most common</span>
+                  )}
+                  <div className="mvp-tier-card__top">
+                    <p className="mvp-tier-card__name">{tier.name}</p>
+                    <div className="mvp-tier-card__price-row">
+                      <span className="mvp-tier-card__price">{tier.price}</span>
+                    </div>
+                    <span className="mvp-tier-card__duration-pill">{tier.duration}</span>
+                    <p className="mvp-tier-card__desc">{tier.description}</p>
+                  </div>
+                  <ul className="mvp-tier-card__list">
+                    {tier.includes.map((item) => (
+                      <li key={item} className="mvp-tier-card__item">
+                        <Check size={15} aria-hidden strokeWidth={2.5} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    className={`button button--lg mvp-tier-card__cta${tier.featured ? " button--primary" : " button--ghost"}`}
+                    href="mailto:hello@toshlabs.com"
+                  >
+                    {tier.cta}
+                  </a>
+                </div>
+              ))}
+            </div>
+
+            <div className="mvp-retainer-add">
+              <div className="mvp-retainer-add__inner">
+                <div className="mvp-retainer-add__copy">
+                  <p className="mvp-retainer-add__title">Need ongoing sprint capacity?</p>
+                  <p className="mvp-retainer-add__desc">
+                    Companies with a continuous product roadmap can move to a monthly sprint
+                    retainer after their first project. One dedicated sprint team, priority
+                    scheduling, and a single point of contact who knows your codebase.
+                    From <strong>$5,500/month</strong>.
+                  </p>
+                </div>
+                <a className="button button--ghost mvp-retainer-add__cta" href="mailto:hello@toshlabs.com">
+                  Ask about the retainer
+                </a>
               </div>
-              <p className="retainer-card__headline">Unlimited Production MVPs</p>
-              <ul className="retainer-card__features">
-                {retainerFeatures.map((feature) => (
-                  <li key={feature} className="retainer-card__feature">
-                    <Check className="retainer-card__check" aria-hidden strokeWidth={2.5} />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                className="button button--primary button--lg retainer-card__cta"
-                href="mailto:hello@toshlabs.com"
-              >
-                Start for $99/month
-              </a>
             </div>
 
             <div className="retainer-trust-row">
