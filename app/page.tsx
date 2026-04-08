@@ -219,6 +219,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── EXPERIENCE ── */}
+      <section className="xp-section">
+        <div className="container xp-inner">
+          <div className="xp-copy">
+            <p className="eyebrow">Pedigree</p>
+            <h2 className="xp-heading">Experience that compounds.</h2>
+            <p className="xp-sub">
+              Our team has built, shipped, and scaled inside companies like these, as
+              engineers, product leads, and technical partners embedded in the work.
+              That exposure is what we bring to every engagement.
+            </p>
+          </div>
+          <div className="xp-logos" aria-label="Companies our team has worked at or alongside">
+            {[
+              { src: "/logos/clients/amazon.svg",         alt: "Amazon" },
+              { src: "/logos/clients/instacart.svg",      alt: "Instacart" },
+              { src: "/logos/clients/herschel.svg",       alt: "Herschel" },
+              { src: "/logos/clients/ifit.svg",           alt: "iFit" },
+              { src: "/logos/clients/rvo-health.svg",     alt: "RVO Health" },
+              { src: "/logos/clients/shamrock-foods.svg", alt: "Shamrock Foods" },
+              { src: "/logos/clients/lumin.svg",          alt: "Lumin" },
+            ].map((logo) => (
+              <div key={logo.alt} className="xp-logo-cell">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={logo.src} alt={logo.alt} className="xp-logo-img" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── SERVICES ── */}
       <section className="section container" id="services">
         <header className="section-header">
