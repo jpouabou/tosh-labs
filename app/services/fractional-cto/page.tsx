@@ -4,7 +4,6 @@ import {
   Briefcase,
   Building2,
   CheckCircle,
-  Clock,
   Code2,
   Layers,
   Mail,
@@ -21,112 +20,111 @@ import Footer from "@/components/Footer";
 const whatThisMeans = [
   {
     icon: Search,
-    title: "Technical strategy & roadmap",
+    title: "Technical direction & decision-making",
     description:
-      "You get a clear technical direction — not just a list of priorities, but a reasoned point of view on what to build, what to defer, and what the next 12 months of engineering looks like.",
+      "Every software decision your business faces — build vs. buy, which platform to use, whether to hire a developer or an agency — gets a clear, informed opinion from someone accountable for the outcome.",
   },
   {
     icon: Users,
-    title: "Team leadership & hiring",
+    title: "Developer and agency oversight",
     description:
-      "We run interviews, build job descriptions that attract the right people, and help you build an engineering team that can operate without us. We're building our own exit from day one.",
+      "You hired a developer or an agency and you're not sure if they're doing the right things. We review their work, ask the hard questions, and make sure you're getting what you're paying for.",
   },
   {
     icon: Layers,
-    title: "Architecture decisions",
+    title: "Tech roadmap you can actually follow",
     description:
-      "Every significant architectural choice gets our attention. Stack decisions, vendor evaluations, system design for new features — made with the weight of someone who's been accountable for these calls before.",
+      "A plain-language plan for what your business needs to build or fix over the next 6–12 months — why, in what order, and roughly what it will cost. Not a technical document. A business plan for your software.",
   },
   {
     icon: Code2,
-    title: "Engineering process & culture",
+    title: "Hiring and onboarding your first tech staff",
     description:
-      "How your team plans, reviews code, and ships. Incident response, on-call rotations, sprint cadence. The operating system of your engineering function — designed to scale without you having to manage it.",
+      "Writing job descriptions, reviewing candidates, and making sure the person you hire is right for your business — not just impressive on paper. We've done this before.",
   },
   {
     icon: Shield,
-    title: "Board & investor communication",
+    title: "Protecting you from bad decisions",
     description:
-      "Technical updates that board members and investors can actually understand. We translate what's happening in engineering into terms that matter to your stakeholders.",
+      "The $40,000 platform migration that wasn't necessary. The agency that quoted six months for a six-week project. The developer who built the wrong thing for two years. We catch these before they happen.",
   },
   {
     icon: BarChart2,
-    title: "Vendor & tooling decisions",
+    title: "Making sense of your software costs",
     description:
-      "Evaluating the right tools for your stage — not the ones that are most popular, but the ones that fit your team's capacity, your budget, and where you're going.",
+      "Subscription tools, hosting bills, contractor invoices — we review what you're spending on technology and tell you what's worth keeping, what's overpriced, and what you should cut.",
   },
 ];
 
 const notThisNotThat = [
   {
-    notThis: "A consultant who writes reports",
-    thisThat: "A partner who attends your leadership meetings and owns technical outcomes",
+    notThis: "A consultant who writes reports then disappears",
+    thisThat: "A partner in your weekly team meeting who owns technical outcomes",
   },
   {
-    notThis: "An advisor who shows up quarterly",
-    thisThat: "Someone embedded in your team's Slack, calendar, and codebase",
+    notThis: "Someone who shows up once a quarter",
+    thisThat: "Someone your team can message when a tech decision needs to be made this week",
   },
   {
-    notThis: "A vendor who executes your tickets",
-    thisThat: "A leader who pushes back when something won't work",
+    notThis: "A vendor who executes whatever you ask",
+    thisThat: "Someone who tells you when what you're asking for is the wrong call",
   },
   {
-    notThis: "An audit that ends with a slideshow",
-    thisThat: "Continuous oversight that compounds over months",
+    notThis: "Generic advice that could apply to any company",
+    thisThat: "Specific guidance based on your industry, your team, and your actual constraints",
   },
 ];
 
 const tiers = [
   {
     name: "Advisory",
-    commitment: "4 hours / week",
-    price: "$3,500",
+    commitment: "2 hrs / week",
+    price: "$1,500",
     duration: "per month",
     description:
-      "For founders who need a technical thought partner but aren't ready for deeper involvement. Weekly check-ins, async availability, and clear opinions on the decisions that matter.",
+      "Regular check-ins and async support for business owners who need a reliable technical voice without deep involvement. Good for ongoing guidance and sanity-checking decisions.",
     includes: [
-      "Weekly 1-hour strategy session",
-      "Async availability via Slack / email",
-      "Architecture & hiring reviews",
-      "Quarterly technical roadmap review",
-      "Board prep & investor technical Q&A",
+      "Weekly 45-minute check-in call",
+      "Async Q&A via email or Slack",
+      "Tech vendor and quote reviews",
+      "Software buying decisions",
+      "Monthly priorities review",
     ],
     cta: "Start Advisory",
     featured: false,
   },
   {
     name: "Active",
-    commitment: "8 hours / week",
-    price: "$6,500",
+    commitment: "4 hrs / week",
+    price: "$3,000",
     duration: "per month",
     description:
-      "Our most common engagement. Real involvement in team meetings, hiring, architecture decisions, and engineering process — without the full-time overhead.",
+      "Our most common engagement. Real involvement in your team's work — attending meetings, reviewing what your developers or agencies are building, and setting technical direction week by week.",
     includes: [
       "Everything in Advisory",
-      "Twice-weekly team meetings",
-      "Active hiring process (sourcing, interviews, offers)",
-      "Engineering culture & process design",
-      "Sprint planning & delivery oversight",
-      "Incident response involvement",
+      "Attend your team meetings (2x/week)",
+      "Developer and agency work reviews",
+      "Hiring support — job descriptions and interviews",
+      "Technical roadmap development",
+      "Incident response availability",
     ],
     cta: "Start Active",
     featured: true,
   },
   {
     name: "Embedded",
-    commitment: "16 hours / week",
-    price: "$11,000",
+    commitment: "8 hrs / week",
+    price: "$5,000",
     duration: "per month",
     description:
-      "For companies that need full CTO-level presence. Deep involvement in every function: team, architecture, roadmap, investor relations, and day-to-day engineering leadership.",
+      "For growing businesses that need a de facto technical leader. Deep, consistent involvement across team management, architecture decisions, vendor relationships, and day-to-day technical direction.",
     includes: [
       "Everything in Active",
       "Daily async touchpoints",
-      "Full ownership of technical roadmap",
-      "VP-level team management support",
-      "Hands-on architecture implementation",
-      "Recruiting partnerships",
-      "Board-level technical representation",
+      "Full technical roadmap ownership",
+      "Vendor contract and negotiation support",
+      "Hands-on architecture reviews",
+      "Team structure and process design",
     ],
     cta: "Start Embedded",
     featured: false,
@@ -135,56 +133,56 @@ const tiers = [
 
 const vsFullTime = [
   {
-    category: "Cost",
-    fractional: "From $3,500/month",
-    fullTime: "$250,000–$400,000/year in salary + equity",
+    category: "Annual cost",
+    fractional: "From $18,000/year",
+    fullTime: "$180,000–$280,000/year in salary alone",
   },
   {
     category: "Time to start",
     fractional: "Within 1–2 weeks",
-    fullTime: "3–6 months to hire, interview, and onboard",
+    fullTime: "3–6 months to find, interview, and onboard",
   },
   {
     category: "Commitment",
     fractional: "Month-to-month, cancel anytime",
-    fullTime: "Multi-year expectation + severance exposure",
+    fullTime: "Multi-year expectation, severance exposure",
   },
   {
     category: "Experience",
-    fractional: "Pattern-matched across multiple companies and stages",
-    fullTime: "Experience from one trajectory",
+    fractional: "Pattern-matched across multiple businesses and industries",
+    fullTime: "Experience typically from one type of company",
   },
   {
-    category: "Overhead",
-    fractional: "No benefits, no equity dilution, no management cost",
-    fullTime: "Full HR overhead, equity, benefits, management",
+    category: "Right for",
+    fractional: "Businesses that need CTO-level thinking without a full-time hire",
+    fullTime: "Companies with 20+ engineers and full-time technical leadership needs",
   },
 ];
 
 const audience = [
   {
     icon: Zap,
-    title: "Founding teams without a technical co-founder",
+    title: "Business owners who hired their first developer",
     description:
-      "You have a strong product vision and a business that's moving. But every technical decision feels like a coin flip. A Fractional CTO gives you the technical voice your founding team needs.",
+      "You made the hire, but now you have no idea if they're doing the right things, making good decisions, or building something that will hold up. A Fractional CTO gives you the oversight to know.",
   },
   {
     icon: TrendingUp,
-    title: "Post-seed companies scaling engineering",
+    title: "Companies managing an agency relationship",
     description:
-      "You've hired a few engineers and it's working — until it isn't. Process starts to break down, quality slips, and you realize you need someone to own the technical function, not just contribute to it.",
+      "You're spending $5,000–$15,000 a month on a dev agency and you need someone in your corner — reviewing their work, holding them accountable, and making sure they're solving your problem, not the easiest version of it.",
   },
   {
     icon: Building2,
-    title: "Companies between technical leaders",
+    title: "Non-technical founders scaling a software product",
     description:
-      "Your CTO just left or is transitioning. You need someone to hold the function while you hire the right long-term person — without losing momentum or making decisions you'll regret.",
+      "Your business runs on software you didn't build and can't fully evaluate. Every tech decision feels like a guess. A Fractional CTO translates between your business goals and the technical work required to get there.",
   },
   {
     icon: Briefcase,
-    title: "Operators with a technical product",
+    title: "Established businesses modernizing their tech",
     description:
-      "You run a strong business but the product is technical and your team needs engineering leadership you can't provide. A Fractional CTO bridges the gap without requiring you to become a technical expert.",
+      "You've been running on the same system for years and you know it needs to change — but you don't have the technical background to evaluate options, manage vendors, or know what a realistic timeline looks like.",
   },
 ];
 
@@ -200,14 +198,15 @@ export default function FractionalCTOPage() {
           <div className="container svc-hero__inner">
             <p className="eyebrow">Fractional CTO</p>
             <h1 className="svc-hero__title">
-              CTO-level thinking.<br />
-              <span className="svc-hero__accent">The commitment you can make.</span>
+              Someone who speaks<br />
+              <span className="svc-hero__accent">business and technology.</span>
             </h1>
             <p className="svc-hero__lede">
-              A full-time CTO costs $300K+ before equity. Most early-stage companies
-              aren&apos;t ready for that — but they need the strategic technical leadership
-              now. A Fractional CTO gives you someone accountable for your technical
-              direction, embedded in your team, from $2,500 a month.
+              Most growing businesses aren&apos;t ready for a full-time CTO — but they
+              still face technical decisions that can cost them years and hundreds of
+              thousands of dollars if they get them wrong. A Fractional CTO gives you
+              experienced technical leadership, embedded in your business, for a fraction
+              of what a full-time hire would cost.
             </p>
             <div className="hero-actions">
               <a className="button button--primary button--lg" href="mailto:hello@toshlabs.com">
@@ -220,7 +219,7 @@ export default function FractionalCTOPage() {
             </div>
             <div className="svc-hero__stats">
               <div className="svc-hero__stat">
-                <span className="svc-hero__stat-value">From $3,500</span>
+                <span className="svc-hero__stat-value">From $1,500</span>
                 <span className="svc-hero__stat-label">Per month</span>
               </div>
               <div className="svc-hero__stat">
@@ -228,8 +227,8 @@ export default function FractionalCTOPage() {
                 <span className="svc-hero__stat-label">No lock-in</span>
               </div>
               <div className="svc-hero__stat">
-                <span className="svc-hero__stat-value">CTO-level</span>
-                <span className="svc-hero__stat-label">Accountability</span>
+                <span className="svc-hero__stat-value">Starts in 1–2 wks</span>
+                <span className="svc-hero__stat-label">Not 6 months</span>
               </div>
             </div>
           </div>
@@ -239,11 +238,11 @@ export default function FractionalCTOPage() {
         <section className="section container">
           <header className="section-header">
             <p className="eyebrow">What a Fractional CTO actually does</p>
-            <h2>Not advisory. Accountable.</h2>
+            <h2>Not a consultant. A partner with skin in the game.</h2>
             <p className="section-sub">
-              Most &ldquo;fractional CTO&rdquo; offerings are advisory with a fancy title.
-              We&apos;re embedded in your team — attending your meetings, owning your
-              roadmap, and accountable for the outcomes.
+              The difference is accountability. We don&apos;t hand you a report and
+              leave — we sit in your meetings, review what your team builds, and own
+              the outcome of the technical decisions we help you make.
             </p>
           </header>
 
@@ -258,16 +257,17 @@ export default function FractionalCTOPage() {
           </div>
         </section>
 
-        {/* ── NOT THIS, THIS ── */}
+        {/* ── NOT THIS → THIS ── */}
         <section className="svc-contrast-section">
           <div className="container svc-contrast-inner">
             <div className="svc-contrast-copy">
-              <p className="eyebrow">The difference</p>
+              <p className="eyebrow">Be clear on what this is</p>
               <h2>What &ldquo;fractional&rdquo; doesn&apos;t mean here.</h2>
               <p>
-                The fractional model has a reputation problem — advisory-only engagements
-                dressed up as leadership. We want to be clear about what this is and what
-                it isn&apos;t before you engage.
+                The word &ldquo;fractional&rdquo; gets used for a lot of things that are
+                really just part-time advisory with a better job title. We want to be
+                direct about what this engagement is — and what it isn&apos;t — before
+                you decide.
               </p>
               <a className="svc-problem-link" href="mailto:hello@toshlabs.com">
                 Ask us anything about how this works <ArrowRight size={14} aria-hidden />
@@ -299,8 +299,8 @@ export default function FractionalCTOPage() {
               <p className="eyebrow svc-eyebrow--dark">Engagement tiers</p>
               <h2 className="svc-pricing-title">Three levels of involvement.</h2>
               <p className="svc-pricing-sub">
-                Start light and scale up as the relationship deepens. Most clients
-                start at Active and move to Embedded as their team grows.
+                Start at whatever level fits your business right now. Most clients
+                start at Advisory or Active and adjust as the relationship develops.
               </p>
             </header>
 
@@ -317,7 +317,7 @@ export default function FractionalCTOPage() {
                     <p className="svc-tier-card__name">{tier.name}</p>
                     <div className="svc-tier-card__price-row">
                       <span className="svc-tier-card__price">{tier.price}</span>
-                      <span className="svc-tier-card__per">/{tier.duration === "per month" ? "mo" : tier.duration}</span>
+                      <span className="svc-tier-card__per">/mo</span>
                     </div>
                     <span className="svc-tier-card__duration-pill">{tier.commitment}</span>
                     <p className="svc-tier-card__desc" style={{marginTop: "16px"}}>{tier.description}</p>
@@ -351,9 +351,9 @@ export default function FractionalCTOPage() {
             <p className="eyebrow">The honest comparison</p>
             <h2>Fractional vs. full-time CTO.</h2>
             <p className="section-sub">
-              We&apos;re not saying a full-time CTO is the wrong call — for some companies
-              at some stage, it absolutely is. But if you&apos;re not there yet, here&apos;s
-              what the math looks like.
+              A full-time CTO makes sense when you have 15+ engineers and a genuine need
+              for full-time technical leadership. For most SMEs, that&apos;s not the stage
+              you&apos;re at — and this is what the math looks like in the meantime.
             </p>
           </header>
 
@@ -386,7 +386,7 @@ export default function FractionalCTOPage() {
         <section className="section container">
           <header className="section-header">
             <p className="eyebrow">Who it&apos;s for</p>
-            <h2>For companies who need the leadership before they can afford the hire.</h2>
+            <h2>For businesses navigating tech decisions without a technical leader.</h2>
           </header>
 
           <div className="diff-grid svc-audience-grid">
@@ -411,11 +411,11 @@ export default function FractionalCTOPage() {
                 <Mail className="eyebrow__icon" aria-hidden />
                 Let&apos;s talk
               </p>
-              <h2>What does your technical function need?</h2>
+              <h2>What technical decision are you sitting on?</h2>
               <p>
-                Tell us where your engineering organization is and where it needs to be.
-                We&apos;ll tell you honestly which engagement tier fits your stage and
-                whether we&apos;re the right fit.
+                Tell us what&apos;s on your plate and we&apos;ll be straight with you
+                about which tier makes sense and whether we&apos;re the right fit.
+                Most engagements are up and running within two weeks.
               </p>
             </div>
             <div className="cta-panel__action">
@@ -423,7 +423,7 @@ export default function FractionalCTOPage() {
                 <Mail className="button__icon" aria-hidden />
                 hello@toshlabs.com
               </a>
-              <p className="cta-note">Vancouver, BC · Working with clients globally</p>
+              <p className="cta-note">Based in Vancouver, BC · Serving businesses across Canada and the US</p>
             </div>
           </div>
         </section>
@@ -642,9 +642,9 @@ export default function FractionalCTOPage() {
           margin-bottom: 64px;
         }
         .svc-eyebrow--dark {
-          background: rgba(255,255,255,0.07);
-          border-color: rgba(255,255,255,0.13);
-          color: rgba(255,255,255,0.55);
+          background: #ffffff;
+          border-color: #ffffff;
+          color: #0d0d0d;
         }
         .svc-pricing-title {
           margin: 0 0 22px;
@@ -815,7 +815,6 @@ export default function FractionalCTOPage() {
           padding: 18px 28px;
           gap: 24px;
         }
-        .svc-comparison-header__category { }
         .svc-comparison-header__col {
           font-size: 0.8125rem;
           font-weight: 700;

@@ -19,102 +19,102 @@ import Topbar from "@/components/Topbar";
 import Footer from "@/components/Footer";
 
 const symptoms = [
-  "Deployments take over an hour and break things when they shouldn't",
-  "Every new feature requires touching code in five different places",
-  "Your database is the bottleneck and everyone knows it",
-  "Onboarding a new engineer takes weeks because the system is impossible to explain",
-  "You're scared to touch certain parts of the codebase",
-  "Your infrastructure costs are climbing faster than your revenue",
+  "Your website slows down or crashes when more than a handful of people visit at once",
+  "You're manually moving data between systems that should be connected",
+  "A developer quoted you $40,000 to add a feature that should take two weeks",
+  "Your previous agency left you with code nobody else can understand or maintain",
+  "You're paying for a platform you've outgrown but don't know how to get off it",
+  "New staff take months to get up to speed because the system is impossible to explain",
 ];
 
 const whatWeDo = [
   {
     icon: Search,
-    title: "Architecture audit",
+    title: "Tech audit",
     description:
-      "A systematic review of your codebase, infrastructure, data model, and deployment pipeline. We document what exists, identify the constraints, and diagnose the root causes — not just the symptoms.",
+      "We review your codebase, hosting setup, database, and integrations. No questionnaires — we read the actual system. Then we give you a plain-language report on what's working, what isn't, and what to fix first.",
   },
   {
     icon: Paintbrush,
-    title: "Redesign & roadmap",
+    title: "A realistic fix plan",
     description:
-      "A concrete technical roadmap: what to change, in what order, and why. Not a wish list — a phased plan that accounts for your team size, your runway, and the fact that you can't stop shipping.",
+      "Not a wishlist. A prioritized plan that accounts for your budget, your team's capacity, and the fact that your business has to keep running while we make changes.",
   },
   {
     icon: Code2,
-    title: "Implementation",
+    title: "Hands-on implementation",
     description:
-      "We don't just deliver a report. We implement the changes. Database migrations, service extraction, infrastructure re-architecture — done alongside your team or independently, depending on what's faster.",
+      "We don't just tell you what needs to change — we do it. Database cleanup, performance fixes, integration repairs, platform migrations. Hands-on work, not a report.",
   },
   {
     icon: Shield,
-    title: "Zero-downtime transition",
+    title: "Zero disruption to your operations",
     description:
-      "Every architectural change is sequenced to keep the business running. Feature flags, incremental migrations, parallel runs. Your users don't feel the work.",
+      "Every change is sequenced so your business keeps running. No surprise downtime, no changes that break other things. Your customers and staff don't feel the work.",
   },
   {
     icon: BarChart2,
-    title: "Performance & observability",
+    title: "Visibility into what's happening",
     description:
-      "Meaningful metrics, alerting that tells you something useful, and traces that let you diagnose problems in minutes instead of hours.",
+      "Basic monitoring and alerting so you know when something's wrong before your customers do. You shouldn't be the last person to find out your site is down.",
   },
   {
     icon: Layers,
-    title: "Knowledge transfer",
+    title: "Documentation your team can use",
     description:
-      "Your team owns everything when we're done. Architectural decision records, runbooks, and working sessions so the next engineer doesn't start from zero.",
+      "Notes, diagrams, and runbooks written for real people — not for engineers with ten years of context. The next person who touches the system will understand it.",
   },
 ];
 
 const tiers = [
   {
-    name: "Architecture Audit",
-    price: "$4,500",
+    name: "Tech Audit",
+    price: "$2,500",
     duration: "Standalone",
     description:
-      "You need to understand what you're dealing with before you commit to fixing it. A clear-eyed assessment of your current architecture, the technical debt that's slowing you down, and a prioritized roadmap for what to address first.",
+      "You need an honest picture of what you're working with before you can decide what to do about it. We review your system and give you a clear report — what's broken, what's a risk, and what to fix in what order.",
     includes: [
-      "Full codebase & infrastructure review",
+      "Full review of codebase & hosting",
+      "Database and integration assessment",
       "Performance bottleneck identification",
-      "Technical debt inventory & prioritization",
-      "Architectural redesign recommendations",
-      "Written report + 90-minute findings session",
+      "Risk and technical debt inventory",
+      "Prioritized written report",
+      "60-minute findings walkthrough",
     ],
-    cta: "Start with an audit",
+    cta: "Book a tech audit",
     featured: false,
   },
   {
-    name: "Audit + Implementation",
-    price: "From $25,000",
-    duration: "4–12 weeks",
+    name: "Audit + Fixes",
+    price: "From $8,500",
+    duration: "2–6 weeks",
     description:
-      "The full engagement. We diagnose, design the fix, and implement it — working alongside your team through every phase. The architecture you end up with is one you can operate, extend, and hand off.",
+      "We diagnose the system and fix what needs fixing. The scope depends on what we find — most SME engagements fall in the $8,500–$18,000 range depending on the complexity of the work.",
     includes: [
-      "Everything in Architecture Audit",
-      "Phased implementation with your team",
-      "Database migration & optimization",
-      "Service decomposition or consolidation",
-      "CI/CD pipeline rebuild",
-      "Observability stack setup",
-      "Documentation & knowledge transfer",
+      "Everything in Tech Audit",
+      "Performance and database fixes",
+      "Integration repairs or replacements",
+      "Platform migration support",
+      "Code cleanup and documentation",
+      "Post-fix monitoring setup",
     ],
-    cta: "Let's scope it",
+    cta: "Start with an audit",
     featured: true,
   },
   {
-    name: "Ongoing Retainer",
-    price: "$6,000",
+    name: "Monthly Oversight",
+    price: "$1,800",
     duration: "per month",
     description:
-      "Architecture isn't a one-time project. For teams that want continuous technical leadership on their infrastructure — ongoing advisory, implementation support, and a partner who understands your system deeply.",
+      "For businesses that want a technical eye on the system ongoing. Eight hours a month of dedicated time — catching problems early, reviewing changes, and keeping things running cleanly.",
     includes: [
-      "16 hours/month of dedicated architecture time",
-      "Continuous codebase & infra advisory",
-      "Code and architecture reviews",
-      "Incident response & root cause analysis",
-      "Monthly architecture health check",
+      "8 hours/month dedicated time",
+      "Monthly system health review",
+      "Code and change reviews",
+      "Incident response support",
+      "Ongoing technical Q&A",
     ],
-    cta: "Start the retainer",
+    cta: "Start oversight",
     featured: false,
   },
 ];
@@ -125,55 +125,55 @@ const steps = [
     icon: Search,
     title: "Assess",
     description:
-      "We get read access to your codebase, infrastructure, and monitoring. No questionnaires — we read the actual code and the actual metrics. Then we tell you what we found.",
+      "We get access to your system and look at it directly. No intake forms, no generic checklists. We read the code, check the database, review the hosting setup. Then we tell you what we found.",
   },
   {
     step: "02",
     icon: Paintbrush,
-    title: "Redesign",
+    title: "Plan",
     description:
-      "Based on the audit, we design the target architecture. Not a perfect greenfield system — a practical system that accounts for where you are and what it takes to get there without stopping the business.",
+      "Based on the audit, we put together a realistic fix plan — what to change, in what order, and how much it will cost. You approve the plan before we touch anything.",
   },
   {
     step: "03",
     icon: Code2,
-    title: "Implement",
+    title: "Fix",
     description:
-      "Phased execution. We tackle the highest-impact changes first, validate the results, and move methodically through the roadmap. You see improvements before the engagement is over.",
+      "We make the changes, one phase at a time. You see progress each week. Nothing gets changed without you knowing what's happening and why.",
   },
   {
     step: "04",
     icon: TrendingUp,
-    title: "Stabilize & hand off",
+    title: "Hand off",
     description:
-      "We monitor the post-change system, tune what needs tuning, document everything, and hand off to your team with confidence that they can operate it without us.",
+      "When the work is done, we document everything and walk your team through it. You own the system. You understand it. You can maintain it without us.",
   },
 ];
 
 const audience = [
   {
     icon: Zap,
-    title: "Startups past product–market fit",
+    title: "Businesses that have outgrown their original setup",
     description:
-      "Your architecture was built to get to launch. Now it's slowing down every sprint. The codebase that got you to 10K users won't get you to 100K without significant work.",
+      "The website or app that worked fine at 20 customers is struggling at 200. The database is slow, the hosting is straining, and adding new features keeps getting harder. Time to fix the foundation.",
   },
   {
     icon: Database,
-    title: "Companies with database problems",
+    title: "Companies running on disconnected tools",
     description:
-      "Slow queries, index debt, schema decisions made in year one that are now costing you in year three. We've untangled these systems before. We know what it takes.",
+      "You're copying data between your CRM, your accounting software, and your operations tool by hand. That's not a workflow — it's a liability. We connect the systems or build the integrations that should have existed from the start.",
   },
   {
     icon: AlertTriangle,
-    title: "Teams preparing for a big technical bet",
+    title: "Teams that inherited a codebase they can't understand",
     description:
-      "You're about to rebuild a major feature, migrate to a new stack, or onboard a significant new customer. Before you make that move, you want someone to pressure-test the plan.",
+      "A previous agency or developer left you with a system that works but that no one can explain, improve, or maintain. We clean it up, document it, and make it something you can actually own.",
   },
   {
     icon: CheckCircle,
-    title: "Engineering teams that inherited a mess",
+    title: "Owners who want to know what they're sitting on",
     description:
-      "New CTO or VP Eng who inherited a system they didn't build. You need an independent assessment and a credible plan before you can tell the board what it will take to fix things.",
+      "You're not sure if your tech setup is solid or a ticking clock. An audit gives you a straight answer — not a sales pitch, just an honest assessment of where you stand.",
   },
 ];
 
@@ -189,19 +189,19 @@ export default function ScaleArchitecturePage() {
           <div className="container svc-hero__inner">
             <p className="eyebrow">Scale &amp; Architecture</p>
             <h1 className="svc-hero__title">
-              Your architecture is either<br />
-              <span className="svc-hero__accent">an asset or a liability.</span>
+              Your old system is costing you<br />
+              <span className="svc-hero__accent">more than you know.</span>
             </h1>
             <p className="svc-hero__lede">
-              Most scaling problems aren&apos;t engineering problems — they&apos;re
-              architecture problems that compound over time. We diagnose what&apos;s
-              holding you back, design the fix, and implement it without stopping the
-              business.
+              A slow website, a codebase nobody can maintain, tools that don&apos;t talk
+              to each other — these aren&apos;t minor inconveniences. They cost you
+              customers, staff time, and developer fees every single month. We fix the
+              underlying problem, not just the symptoms.
             </p>
             <div className="hero-actions">
               <a className="button button--primary button--lg" href="mailto:hello@toshlabs.com">
                 <Mail className="button__icon" aria-hidden />
-                Start with an audit
+                Book a tech audit
               </a>
               <a className="button button--ghost button--lg" href="#pricing">
                 View pricing
@@ -209,16 +209,16 @@ export default function ScaleArchitecturePage() {
             </div>
             <div className="svc-hero__stats">
               <div className="svc-hero__stat">
-                <span className="svc-hero__stat-value">$4,500</span>
-                <span className="svc-hero__stat-label">Audit starting price</span>
+                <span className="svc-hero__stat-value">$2,500</span>
+                <span className="svc-hero__stat-label">Audit fixed price</span>
               </div>
               <div className="svc-hero__stat">
-                <span className="svc-hero__stat-value">Zero downtime</span>
-                <span className="svc-hero__stat-label">Implementation approach</span>
+                <span className="svc-hero__stat-value">No downtime</span>
+                <span className="svc-hero__stat-label">Business keeps running</span>
               </div>
               <div className="svc-hero__stat">
-                <span className="svc-hero__stat-value">4–12 Weeks</span>
-                <span className="svc-hero__stat-label">Full engagement</span>
+                <span className="svc-hero__stat-value">2–6 Weeks</span>
+                <span className="svc-hero__stat-label">Typical fix engagement</span>
               </div>
             </div>
           </div>
@@ -229,14 +229,15 @@ export default function ScaleArchitecturePage() {
           <div className="container svc-symptoms-inner">
             <div className="svc-symptoms-copy">
               <p className="eyebrow">Sound familiar?</p>
-              <h2>The signs your architecture needs attention.</h2>
+              <h2>The signs your system needs attention.</h2>
               <p>
-                These aren&apos;t edge cases. They&apos;re the compounding cost of
-                decisions made under pressure when things were smaller. The longer you
-                wait, the more they cost to fix.
+                These problems don&apos;t announce themselves. They compound quietly — a
+                little slower every month, a little more expensive to change, a little
+                harder to explain to new staff. By the time it feels urgent, it&apos;s
+                already been costing you for a long time.
               </p>
               <a className="svc-problem-link" href="mailto:hello@toshlabs.com">
-                Talk to us about your situation <ArrowRight size={14} aria-hidden />
+                Tell us what you&apos;re dealing with <ArrowRight size={14} aria-hidden />
               </a>
             </div>
             <ul className="svc-symptoms-list">
@@ -254,10 +255,11 @@ export default function ScaleArchitecturePage() {
         <section className="section container">
           <header className="section-header">
             <p className="eyebrow">What we do</p>
-            <h2>From diagnosis to production — we own the whole problem.</h2>
+            <h2>We find the problem and we fix it.</h2>
             <p className="section-sub">
-              Most consultants deliver a report. We deliver a working system. Every
-              engagement covers the full arc from audit through implementation and handoff.
+              Most consultants hand you a report. We hand you a working system. Every
+              engagement goes from diagnosis through implementation — with your team
+              informed at every step.
             </p>
           </header>
 
@@ -280,8 +282,8 @@ export default function ScaleArchitecturePage() {
               <p className="eyebrow svc-eyebrow--dark">Pricing</p>
               <h2 className="svc-pricing-title">Three ways to engage.</h2>
               <p className="svc-pricing-sub">
-                Start with an audit and see what we find. Expand to implementation if the
-                scope warrants it. Stay on retainer if you want us watching the system long-term.
+                Start with an audit and see what we find. If the scope warrants a fix
+                engagement, we scope it and price it before anything starts.
               </p>
             </header>
 
@@ -292,7 +294,7 @@ export default function ScaleArchitecturePage() {
                   className={`svc-tier-card${tier.featured ? " svc-tier-card--featured" : ""}`}
                 >
                   {tier.featured && (
-                    <span className="svc-tier-card__badge">Most comprehensive</span>
+                    <span className="svc-tier-card__badge">Most common</span>
                   )}
                   <div className="svc-tier-card__top">
                     <p className="svc-tier-card__name">{tier.name}</p>
@@ -321,7 +323,7 @@ export default function ScaleArchitecturePage() {
             </div>
 
             <p className="svc-pricing-note">
-              All engagements start with a scoping call — no commitment, just an honest conversation about what you&apos;re dealing with.
+              Every engagement starts with a scoping call. No commitment — just an honest conversation about what you&apos;re dealing with.
             </p>
           </div>
         </section>
@@ -329,11 +331,11 @@ export default function ScaleArchitecturePage() {
         {/* ── PROCESS ── */}
         <section className="section container">
           <header className="section-header">
-            <p className="eyebrow">The process</p>
-            <h2>A methodology built around your constraints.</h2>
+            <p className="eyebrow">How it works</p>
+            <h2>Straightforward from day one.</h2>
             <p className="section-sub">
-              We don&apos;t stop your team to fix things. Every change is sequenced to keep
-              the business running while the architecture underneath it improves.
+              We don&apos;t disappear for weeks and reappear with a surprise. You know
+              what we&apos;re doing and why at every step.
             </p>
           </header>
 
@@ -353,7 +355,7 @@ export default function ScaleArchitecturePage() {
         <section className="section container">
           <header className="section-header">
             <p className="eyebrow">Who it&apos;s for</p>
-            <h2>For teams where the architecture is the problem.</h2>
+            <h2>For businesses where the tech is getting in the way.</h2>
           </header>
 
           <div className="diff-grid svc-audience-grid">
@@ -376,13 +378,13 @@ export default function ScaleArchitecturePage() {
             <div className="cta-panel__copy">
               <p className="eyebrow">
                 <Mail className="eyebrow__icon" aria-hidden />
-                Start with an audit
+                Get started
               </p>
-              <h2>Tell us where it hurts.</h2>
+              <h2>Describe what&apos;s slowing you down.</h2>
               <p>
-                Describe what&apos;s slowing you down and we&apos;ll tell you honestly
-                whether an audit makes sense or if there&apos;s a faster path. Most
-                engagements start within two weeks.
+                Tell us what you&apos;re dealing with and we&apos;ll tell you honestly
+                whether an audit makes sense and what it would likely cost to fix.
+                Most engagements start within two weeks.
               </p>
             </div>
             <div className="cta-panel__action">
@@ -390,7 +392,7 @@ export default function ScaleArchitecturePage() {
                 <Mail className="button__icon" aria-hidden />
                 hello@toshlabs.com
               </a>
-              <p className="cta-note">Vancouver, BC · Working with clients globally</p>
+              <p className="cta-note">Based in Vancouver, BC · Serving businesses across Canada and the US</p>
             </div>
           </div>
         </section>
@@ -586,9 +588,9 @@ export default function ScaleArchitecturePage() {
           margin-bottom: 64px;
         }
         .svc-eyebrow--dark {
-          background: rgba(255,255,255,0.07);
-          border-color: rgba(255,255,255,0.13);
-          color: rgba(255,255,255,0.55);
+          background: #ffffff;
+          border-color: #ffffff;
+          color: #0d0d0d;
         }
         .svc-pricing-title {
           margin: 0 0 22px;

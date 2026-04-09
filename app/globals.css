@@ -313,13 +313,13 @@ h3 {
   align-items: center;
   gap: 8px;
   margin: 0 0 18px;
-  padding: 4px 13px;
+  padding: 5px 14px;
   border-radius: var(--radius-sm);
-  background: var(--dim);
-  border: 1px solid var(--border-2);
-  color: var(--soft);
-  font-size: 0.73rem;
-  font-weight: 600;
+  background: #e8e8e8;
+  border: none;
+  color: #0d0d0d;
+  font-size: 0.7rem;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -646,6 +646,40 @@ h3 {
   border-color: var(--border-2);
   transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
+}
+.service-card--link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.service-card--link h3,
+.service-card--link p { color: inherit; }
+.service-card--link > p { color: var(--muted); }
+.service-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 22px;
+  font-size: 0.875rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  position: relative;
+  z-index: 1;
+  transition: gap 0.25s var(--ease-out);
+}
+.service-card__cta-arrow {
+  font-size: 0.9rem;
+  transition: transform 0.25s var(--ease-out);
+}
+.service-card--link:hover .service-card__cta {
+  gap: 11px;
+}
+.service-card--link:hover .service-card__cta-arrow {
+  transform: translateX(3px);
 }
 
 /* ── PRODUCT GRID ── */

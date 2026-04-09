@@ -1,18 +1,17 @@
 import {
+  ArrowRight,
   CheckCircle,
   Clock,
   Code2,
+  FileText,
   Layers,
   Mail,
+  MessageSquare,
   Paintbrush,
   Rocket,
   Search,
-  Users,
-  Zap,
-  FileText,
-  MessageSquare,
   Target,
-  ArrowRight,
+  Users,
 } from "lucide-react";
 import { IconBox } from "@/components/IconBox";
 import Topbar from "@/components/Topbar";
@@ -23,70 +22,70 @@ const deliverables = [
     icon: Search,
     title: "Discovery & problem framing",
     description:
-      "Before we design anything, we get sharp on what you're actually solving. Who are the users, what job are they hiring your product to do, and what does a successful validation look like?",
+      "We start by getting clear on what you're actually solving — who uses it, what they need, and what a successful outcome looks like. Most projects fail because this step gets skipped.",
   },
   {
     icon: Paintbrush,
-    title: "UX design & flows",
+    title: "UX design & user flows",
     description:
-      "End-to-end user flows, wireframes, and high-fidelity designs. Built to test, not just to present. Every screen earns its place.",
+      "Screens, flows, and interactions designed around real users. Not generic templates — layouts that match how your customers or team actually think and move through a process.",
   },
   {
     icon: Code2,
     title: "Working prototype",
     description:
-      "Not a Figma file. A real, interactive product you can put in front of users, share with investors, and demonstrate with confidence.",
+      "Not a PDF. Not a slideshow. A real, clickable product you can put in front of customers, staff, or investors and get honest feedback from.",
   },
   {
     icon: FileText,
-    title: "Test plan & feedback framework",
+    title: "Feedback framework",
     description:
-      "A structured way to collect signal from your first users — what to ask, what to watch, and how to turn observations into decisions.",
+      "A structured approach to testing the prototype — what to ask, what to watch for, and how to turn what you learn into clear next steps.",
   },
   {
     icon: MessageSquare,
     title: "Findings & recommendations",
     description:
-      "A clear read on what the prototype revealed: what's working, what isn't, and what to build next. Evidence over intuition.",
+      "A plain-language summary of what worked, what didn't, and what to build next. No jargon, no fluff — just a clear read on where to put your money.",
   },
   {
     icon: Rocket,
     title: "Build-ready handoff",
     description:
-      "If the prototype validates, you have everything you need to move directly into a production build — no rework, no redesign from scratch.",
+      "If you decide to move forward, you already have everything a development team needs to start — no redesign, no rework, no starting from scratch.",
   },
 ];
 
 const tiers = [
   {
-    name: "Validation Sprint",
+    name: "Discovery Sprint",
     duration: "2 weeks",
-    price: "$9,500",
+    price: "$4,500",
     description:
-      "Designed for founders who need to answer one critical question before committing serious engineering time or capital.",
+      "For business owners who need to answer one important question before spending real money. We map the problem, design the core flow, and build a prototype you can actually react to.",
     includes: [
-      "Problem framing workshop",
+      "Problem framing session",
       "Core user flow design",
-      "Interactive prototype (5–8 screens)",
-      "Structured user testing framework",
-      "Findings summary & recommendation",
+      "Clickable prototype (5–8 screens)",
+      "User testing framework",
+      "Written findings & recommendation",
     ],
-    cta: "Start a Validation Sprint",
+    cta: "Start a Discovery Sprint",
     featured: false,
   },
   {
     name: "Foundation Sprint",
-    duration: "4 weeks",
-    price: "$19,500",
+    duration: "3–4 weeks",
+    price: "$9,500",
     description:
-      "For founders who are past the question stage and need a fully testable product that can stand up to real users and investor scrutiny.",
+      "For businesses ready to build something more complete — a full prototype that covers the end-to-end experience and is detailed enough to test with real customers or present to stakeholders.",
     includes: [
-      "Everything in Validation Sprint",
+      "Everything in Discovery Sprint",
       "Full UX design (10–20 screens)",
       "Functional prototype with real interactions",
-      "Multiple user testing rounds",
-      "Full build-ready design handoff",
-      "Technical architecture recommendations",
+      "Multiple rounds of user feedback",
+      "Build-ready design handoff",
+      "Technical stack recommendation",
     ],
     cta: "Start a Foundation Sprint",
     featured: true,
@@ -99,49 +98,49 @@ const steps = [
     icon: Target,
     title: "Brief",
     description:
-      "You walk us through the problem, the users, and the assumptions you need to test. We push back where we see gaps and align on what a successful sprint looks like.",
+      "You walk us through your idea, your users, and what you need to find out. We ask the uncomfortable questions and align on what a useful result looks like.",
   },
   {
     step: "02",
     icon: Paintbrush,
     title: "Design",
     description:
-      "User flows, wireframes, high-fidelity screens. We move fast — no month-long design phases. You review and give feedback in real time.",
+      "User flows, wireframes, high-fidelity screens. We move quickly — you review and give feedback in real time. No month-long design phases.",
   },
   {
     step: "03",
     icon: Code2,
     title: "Build",
     description:
-      "A real, working prototype built to be tested. Not a presentation deck. Something users can interact with and give honest reactions to.",
+      "A working prototype your customers or team can actually use. We build it to be tested — not just to look good in a demo.",
   },
   {
     step: "04",
     icon: FileText,
-    title: "Validate & Hand off",
+    title: "Test & hand off",
     description:
-      "You test it. We help you collect and interpret the signal. Then you get everything: designs, prototype, findings, and a clear recommendation on what to build next.",
+      "You put it in front of real people. We help you read what you learn. Then you get everything: designs, prototype, findings, and a clear recommendation.",
   },
 ];
 
 const audience = [
   {
     icon: CheckCircle,
-    title: "Pre-build founders",
+    title: "Business owners before their first software investment",
     description:
-      "You have an idea that feels right but haven't committed engineering resources yet. A sprint is the cheapest way to confirm you're building the right thing before you build it.",
+      "You've never spent $20,000 on custom software before and you want to make sure you're solving the right problem before committing. A sprint is the lowest-risk way to find out.",
   },
   {
     icon: Layers,
-    title: "Teams replatforming a feature",
+    title: "Teams replacing a manual process",
     description:
-      "You're about to invest in a significant product change and want to test the UX before you start writing code. Two weeks of prototyping can save two months of rework.",
+      "Your team is running on spreadsheets, email chains, or a tool that almost fits. You need to see what a purpose-built solution could look like before you commission a full build.",
   },
   {
     icon: Users,
-    title: "Founders raising pre-seed or seed",
+    title: "Companies adding a customer-facing feature",
     description:
-      "A working prototype that you can demo isn't a nice-to-have — it can be the difference between a term sheet and a pass. We've built investor-ready prototypes on a two-week timeline.",
+      "You want to offer online booking, a client portal, or a self-serve tool — but you don't want to build the wrong thing. Two weeks of prototyping can save months of rework.",
   },
 ];
 
@@ -157,14 +156,14 @@ export default function PrototypeSprintPage() {
           <div className="container svc-hero__inner">
             <p className="eyebrow">Prototype Sprint</p>
             <h1 className="svc-hero__title">
-              Stop building on<br />
-              <span className="svc-hero__accent">assumptions.</span>
+              Test the idea before<br />
+              <span className="svc-hero__accent">you fund the build.</span>
             </h1>
             <p className="svc-hero__lede">
-              Most founders spend months and real money building the wrong thing. A
-              Prototype Sprint gives you a working, testable product in two to four weeks —
-              enough to put in front of users, show investors, and make your next decision
-              with something real in hand.
+              Most small business software projects go wrong for the same reason: no one
+              validated the idea before the build started. A Prototype Sprint gives you a
+              working, testable product in two to four weeks — enough to know whether
+              you&apos;re solving the right problem before you spend real money on it.
             </p>
             <div className="hero-actions">
               <a className="button button--primary button--lg" href="mailto:hello@toshlabs.com">
@@ -177,16 +176,16 @@ export default function PrototypeSprintPage() {
             </div>
             <div className="svc-hero__stats">
               <div className="svc-hero__stat">
+                <span className="svc-hero__stat-value">From $4,500</span>
+                <span className="svc-hero__stat-label">Fixed price</span>
+              </div>
+              <div className="svc-hero__stat">
                 <span className="svc-hero__stat-value">2–4 Weeks</span>
                 <span className="svc-hero__stat-label">Idea to prototype</span>
               </div>
               <div className="svc-hero__stat">
-                <span className="svc-hero__stat-value">Real users</span>
-                <span className="svc-hero__stat-label">Test-ready product</span>
-              </div>
-              <div className="svc-hero__stat">
-                <span className="svc-hero__stat-value">Investor-ready</span>
-                <span className="svc-hero__stat-label">From day one</span>
+                <span className="svc-hero__stat-value">Real feedback</span>
+                <span className="svc-hero__stat-label">From actual users</span>
               </div>
             </div>
           </div>
@@ -196,28 +195,28 @@ export default function PrototypeSprintPage() {
         <section className="svc-problem-section">
           <div className="container svc-problem-inner">
             <div className="svc-problem-copy">
-              <p className="eyebrow">The problem</p>
-              <h2>Most products fail before they launch.</h2>
+              <p className="eyebrow">Why this matters</p>
+              <h2>Most business software fails before a line of code is written.</h2>
               <p>
-                Not because the engineering was bad. Because the team spent six months
-                building the wrong thing. No one validated the assumptions. No one put
-                the product in front of a real user before the architecture was locked in.
+                A local service company spends $30,000 building a customer portal their
+                clients never use. A retailer commissions an inventory tool that doesn&apos;t
+                match how their warehouse actually works. A professional services firm builds
+                a quoting system that&apos;s slower than the spreadsheet it replaced.
               </p>
               <p>
-                A Prototype Sprint is the antidote. Two to four weeks of focused work
-                to answer the most important question you have before you commit serious
-                resources to the answer.
+                Every one of these is a validation problem, not a technical one. A
+                Prototype Sprint exists to catch these issues before they become expensive.
               </p>
               <a className="svc-problem-link" href="mailto:hello@toshlabs.com">
-                Let&apos;s talk about your assumption <ArrowRight size={14} aria-hidden />
+                Talk to us about your idea <ArrowRight size={14} aria-hidden />
               </a>
             </div>
             <div className="svc-problem-callout">
               <p className="svc-callout__quote">
-                &ldquo;The most dangerous assumption in product development is the one everyone
-                in the room already agrees with.&rdquo;
+                &ldquo;The two weeks you spend testing your assumptions will save you
+                more money than anything else you do this year.&rdquo;
               </p>
-              <span className="svc-callout__attr">— Every post-mortem, ever.</span>
+              <span className="svc-callout__attr">— Something we say in every kickoff call.</span>
             </div>
           </div>
         </section>
@@ -226,10 +225,11 @@ export default function PrototypeSprintPage() {
         <section className="section container">
           <header className="section-header">
             <p className="eyebrow">What you get</p>
-            <h2>Everything to validate, nothing to throw away.</h2>
+            <h2>A prototype you can actually use. Not just look at.</h2>
             <p className="section-sub">
-              A Prototype Sprint isn&apos;t a deck and a Figma link. It&apos;s a working
-              product, a tested hypothesis, and a clear path forward — all in under a month.
+              Every sprint ends with a working product, a clear read on what your users
+              think, and a recommendation on what to do next. You leave with real information,
+              not another presentation.
             </p>
           </header>
 
@@ -252,8 +252,8 @@ export default function PrototypeSprintPage() {
               <p className="eyebrow svc-eyebrow--dark">Pricing</p>
               <h2 className="svc-pricing-title">Two tiers. Both fixed-price.</h2>
               <p className="svc-pricing-sub">
-                No hourly rates. No scope creep. You know exactly what you&apos;re getting
-                and what you&apos;re paying before the sprint starts.
+                You know exactly what you&apos;re paying before anything starts.
+                No hourly billing, no scope creep, no surprises at the end.
               </p>
             </header>
 
@@ -293,7 +293,7 @@ export default function PrototypeSprintPage() {
             </div>
 
             <p className="svc-pricing-note">
-              Not sure which tier is right for you? Email us and we&apos;ll be direct about which one fits your stage.
+              Not sure which tier is right for you? Email us — we&apos;ll ask a few questions and give you a straight answer.
             </p>
           </div>
         </section>
@@ -321,11 +321,10 @@ export default function PrototypeSprintPage() {
         <section className="section container">
           <header className="section-header">
             <p className="eyebrow">Who it&apos;s for</p>
-            <h2>Built for founders who respect the unknown.</h2>
+            <h2>For business owners who want to know before they build.</h2>
             <p className="section-sub">
-              The best builders validate before they build. A Prototype Sprint is for the teams
-              who understand that the two weeks you spend testing assumptions saves six months
-              of rework.
+              A Prototype Sprint is for anyone who has an idea worth testing but doesn&apos;t
+              want to spend $20,000–$50,000 finding out it was the wrong one.
             </p>
           </header>
 
@@ -349,13 +348,13 @@ export default function PrototypeSprintPage() {
             <div className="cta-panel__copy">
               <p className="eyebrow">
                 <Mail className="eyebrow__icon" aria-hidden />
-                Start a sprint
+                Let&apos;s talk
               </p>
-              <h2>What assumption are you sitting on?</h2>
+              <h2>Tell us what you&apos;re trying to figure out.</h2>
               <p>
-                Tell us what you&apos;re building and what you need to validate. We&apos;ll
-                scope the sprint and tell you honestly which tier makes sense for your stage.
-                Most sprints kick off within a week.
+                Describe the idea and the question you&apos;re sitting on. We&apos;ll tell
+                you which sprint makes sense and what you&apos;ll walk away knowing.
+                Most sprints start within a week of first contact.
               </p>
             </div>
             <div className="cta-panel__action">
@@ -363,7 +362,7 @@ export default function PrototypeSprintPage() {
                 <Mail className="button__icon" aria-hidden />
                 hello@toshlabs.com
               </a>
-              <p className="cta-note">Vancouver, BC · Working with clients globally</p>
+              <p className="cta-note">Based in Vancouver, BC · Serving businesses across Canada and the US</p>
             </div>
           </div>
         </section>
@@ -561,9 +560,9 @@ export default function PrototypeSprintPage() {
           margin-bottom: 64px;
         }
         .svc-eyebrow--dark {
-          background: rgba(255,255,255,0.07);
-          border-color: rgba(255,255,255,0.13);
-          color: rgba(255,255,255,0.55);
+          background: #ffffff;
+          border-color: #ffffff;
+          color: #0d0d0d;
         }
         .svc-pricing-title {
           margin: 0 0 22px;
@@ -692,7 +691,6 @@ export default function PrototypeSprintPage() {
         .svc-tier-card--featured .svc-tier-card__item svg { color: #0d0d0d; }
         .svc-tier-card__cta { width: 100%; justify-content: center; }
 
-        /* ghost variant inside dark section */
         .svc-tier-card .button--ghost {
           border-color: rgba(255,255,255,0.18);
           color: #fafafa;

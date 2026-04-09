@@ -22,30 +22,38 @@ const services = [
   {
     icon: Zap,
     title: "Prototype Sprint",
+    href: "/services/prototype-sprint",
+    cta: "See sprint details",
     description:
-      "Got an idea you need to validate? We design and build a functional, testable prototype in weeks. Enough to put in front of investors, test with real users, and make your next decision with something concrete in hand.",
-    tags: ["2-4 Weeks", "Investor-ready", "User-testable"],
+      "Test the idea before you fund the build. We design and build a working, testable prototype in two to four weeks — enough to know whether you're solving the right problem before you spend real money on it.",
+    tags: ["From $4,500", "2–4 weeks", "Fixed price"],
   },
   {
     icon: Rocket,
     title: "Production MVP",
+    href: "/services/production-mvp",
+    cta: "See how we build",
     description:
-      "Your MVP shouldn't need a full rewrite six months in. We build production-grade from the first commit: clean architecture, tested code, and a foundation your next engineering hire can actually work in.",
-    tags: ["Web & Mobile", "Production-grade", "Built to scale"],
+      "Custom software built right the first time. Scoped tightly, priced upfront, and handed off with documentation your team or next developer can actually work from.",
+    tags: ["From $12,000", "4–10 weeks", "Fixed price"],
   },
   {
     icon: TrendingUp,
     title: "Scale & Architecture",
+    href: "/services/scale-architecture",
+    cta: "Start with an audit",
     description:
-      "Your product is growing faster than your architecture can handle. We step in, assess what's holding you back, redesign what needs to change, and implement it without stopping the business.",
-    tags: ["System design", "Performance", "Zero downtime"],
+      "A slow site, tools that don't connect, or a codebase nobody can maintain — these problems compound quietly. We find what's holding you back and fix it, without disrupting your operations.",
+    tags: ["Audit from $2,500", "No downtime", "SME-focused"],
   },
   {
     icon: Building2,
     title: "Fractional CTO",
+    href: "/services/fractional-cto",
+    cta: "View engagement tiers",
     description:
-      "Not ready for a full-time CTO but need the thinking? We sit at your leadership table, own the technical direction, and give your team the clarity they need to ship with confidence.",
-    tags: ["Technical strategy", "Team leadership", "Ongoing advisory"],
+      "Technical leadership without the full-time hire. We sit in your meetings, oversee your developers or agencies, and make sure your technology decisions are the right ones for your business.",
+    tags: ["From $1,500/mo", "Month-to-month", "No lock-in"],
   },
 ];
 
@@ -263,7 +271,7 @@ export default function HomePage() {
 
         <div className="services-grid">
           {services.map((svc) => (
-            <article key={svc.title} className="service-card">
+            <a key={svc.title} href={svc.href} className="service-card service-card--link">
               <IconBox icon={svc.icon} />
               <h3>{svc.title}</h3>
               <p>{svc.description}</p>
@@ -272,7 +280,11 @@ export default function HomePage() {
                   <span key={t} className="tag">{t}</span>
                 ))}
               </div>
-            </article>
+              <span className="service-card__cta">
+                {svc.cta}
+                <span className="service-card__cta-arrow" aria-hidden="true">→</span>
+              </span>
+            </a>
           ))}
         </div>
       </section>

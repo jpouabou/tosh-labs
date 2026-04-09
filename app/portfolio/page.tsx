@@ -80,16 +80,17 @@ export default function PortfolioPage() {
                 style={{ height: 40 }}
                 className="portfolio-product-logo"
               />
-              <h2>The engineering team OS.</h2>
+              <h2>You&apos;re already running your team. Stop doing it across twelve tabs.</h2>
               <p>
-                Most engineering managers are doing the job across four
-                different tools. Standups in Slack, 1:1s in Notion, health
-                checks buried in spreadsheets, and sprint visibility somewhere
-                in Linear. Pulsr consolidates all of it into one workspace
-                built specifically for how engineering teams operate.
+                Engineering managers don&apos;t only ship code. They track delivery,
+                run standups, hold 1:1s, watch capacity, and unblock people — work
+                that never stops but rarely has software built for it. Pulsr is a
+                dedicated workspace for that layer of the job, connected to Linear
+                so everything stays grounded in real execution data.
               </p>
               <div className="tag-row">
-                <span className="tag">Beta</span>
+                <span className="tag">Live · Beta</span>
+                <span className="tag">Linear integration</span>
                 <a
                   href="https://usepulsr.com"
                   target="_blank"
@@ -101,438 +102,201 @@ export default function PortfolioPage() {
               </div>
             </div>
 
-            {/* 2b — Mockup */}
+            {/* 2b — Mockup: Dashboard view with accurate widgets and nav */}
             <div className="portfolio-mockup-wrap">
               <div className="portfolio-mockup-frame">
                 <svg
                   viewBox="0 0 900 540"
                   xmlns="http://www.w3.org/2000/svg"
                   className="portfolio-mockup-svg"
-                  aria-label="Pulsr app interface"
+                  aria-label="Pulsr dashboard interface"
                 >
-                  {/* App background */}
+                  {/* App chrome */}
                   <rect width="900" height="540" fill="#0a0a0b" />
 
-                  {/* Sidebar */}
-                  <rect width="188" height="540" fill="#111113" />
+                  {/* ── Sidebar (0–192) ── */}
+                  <rect width="192" height="540" fill="#111113" />
 
-                  {/* Sidebar logo area */}
-                  <rect x="16" y="16" width="28" height="28" rx="7" fill="#1a1a1f" />
-                  <polygon
-                    points="22,22 38,30 30,38 14,30"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeWidth="1.5"
-                    strokeLinejoin="round"
-                    opacity="0.3"
-                  />
-                  <polygon
-                    points="26,24 42,32 34,40 18,32"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeWidth="1.5"
-                    strokeLinejoin="round"
-                    opacity="0.6"
-                  />
-                  <polygon points="23,27 32,32 23,37 14,32" fill="#ffffff" opacity="0.9" />
-                  <text
-                    x="52"
-                    y="35"
-                    fill="#ffffff"
-                    fontSize="13"
-                    fontWeight="700"
-                    fontFamily="system-ui, sans-serif"
-                    letterSpacing="-0.5"
-                  >
-                    Pulsr
-                  </text>
+                  {/* App name — text only, no logo mark */}
+                  <text x="16" y="34" fill="#e4e4e7" fontSize="14" fontWeight="700" fontFamily="system-ui, sans-serif" letterSpacing="-0.5">Pulsr</text>
 
-                  {/* Sidebar nav items */}
-                  {/* Dashboard - active */}
-                  <rect x="10" y="64" width="168" height="32" rx="7" fill="#1e1e24" />
-                  <rect x="18" y="72" width="14" height="14" rx="3" fill="#2a2a35" />
-                  <text
-                    x="38"
-                    y="83"
-                    fill="#e4e4e7"
-                    fontSize="11.5"
-                    fontFamily="system-ui, sans-serif"
-                    fontWeight="500"
-                  >
-                    Dashboard
-                  </text>
+                  {/* Dashboard — active highlight */}
+                  <rect x="8" y="54" width="176" height="28" rx="6" fill="#1e1e24" />
+                  <text x="26" y="73" fill="#e4e4e7" fontSize="11" fontWeight="600" fontFamily="system-ui, sans-serif">Dashboard</text>
 
-                  {/* Other nav items */}
-                  <text x="36" y="116" fill="#555560" fontSize="11.5" fontFamily="system-ui, sans-serif">
-                    Cycles
-                  </text>
-                  <text x="36" y="143" fill="#555560" fontSize="11.5" fontFamily="system-ui, sans-serif">
-                    Standup
-                  </text>
-                  <text x="36" y="170" fill="#555560" fontSize="11.5" fontFamily="system-ui, sans-serif">
-                    1:1s
-                  </text>
-                  <text x="36" y="197" fill="#555560" fontSize="11.5" fontFamily="system-ui, sans-serif">
-                    Watchlist
-                  </text>
-                  <text x="36" y="224" fill="#555560" fontSize="11.5" fontFamily="system-ui, sans-serif">
-                    Integrations
-                  </text>
+                  {/* Inactive nav items */}
+                  {[
+                    ["Standup",   104],
+                    ["Issues",    127],
+                    ["Team",      150],
+                    ["1:1s",      173],
+                    ["Cycles",    196],
+                    ["Projects",  219],
+                    ["Watchlist", 242],
+                  ].map(([label, y]) => (
+                    <text key={label as string} x="26" y={y as number} fill="#3a3a46" fontSize="11" fontFamily="system-ui, sans-serif">{label as string}</text>
+                  ))}
 
-                  {/* Sidebar section label */}
-                  <text
-                    x="16"
-                    y="270"
-                    fill="#333340"
-                    fontSize="9.5"
-                    fontFamily="system-ui, sans-serif"
-                    fontWeight="600"
-                    letterSpacing="0.08em"
-                  >
-                    TEAM
-                  </text>
+                  {/* Divider */}
+                  <line x1="8" y1="266" x2="184" y2="266" stroke="#1e1e24" strokeWidth="1"/>
 
-                  {/* Team member avatars */}
-                  <circle cx="26" cy="292" r="10" fill="#2a2a35" />
-                  <text x="22" y="296" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    AY
-                  </text>
-                  <circle cx="26" cy="320" r="10" fill="#2a2a35" />
-                  <text x="22" y="324" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    ML
-                  </text>
-                  <circle cx="26" cy="348" r="10" fill="#2a2a35" />
-                  <text x="22" y="352" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    SK
-                  </text>
-                  <circle cx="26" cy="376" r="10" fill="#2a2a35" />
-                  <text x="22" y="380" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    JR
-                  </text>
-                  <text x="44" y="296" fill="#444450" fontSize="11" fontFamily="system-ui, sans-serif">
-                    Aiko Yamamoto
-                  </text>
-                  <text x="44" y="324" fill="#444450" fontSize="11" fontFamily="system-ui, sans-serif">
-                    Marcus Li
-                  </text>
-                  <text x="44" y="352" fill="#444450" fontSize="11" fontFamily="system-ui, sans-serif">
-                    Sara Kim
-                  </text>
-                  <text x="44" y="380" fill="#444450" fontSize="11" fontFamily="system-ui, sans-serif">
-                    James R.
-                  </text>
+                  {/* Linear connected badge */}
+                  <rect x="8" y="278" width="176" height="24" rx="6" fill="#18181f" />
+                  <rect x="16" y="285" width="6" height="10" rx="1.5" fill="#5e6ad2"/>
+                  <text x="28" y="294" fill="#5e6ad2" fontSize="9.5" fontWeight="600" fontFamily="system-ui, sans-serif">Linear connected</text>
 
-                  {/* Main content area header */}
-                  <text
-                    x="212"
-                    y="42"
-                    fill="#e4e4e7"
-                    fontSize="16"
-                    fontWeight="700"
-                    fontFamily="system-ui, sans-serif"
-                    letterSpacing="-0.5"
-                  >
-                    Team Health
-                  </text>
-                  <rect x="342" y="26" width="68" height="22" rx="6" fill="#1e1e24" />
-                  <text
-                    x="356"
-                    y="41"
-                    fill="#aaaaaa"
-                    fontSize="10.5"
-                    fontFamily="system-ui, sans-serif"
-                    fontWeight="500"
-                  >
-                    Sprint 14
-                  </text>
+                  {/* Settings at bottom */}
+                  <text x="26" y="514" fill="#3a3a46" fontSize="11" fontFamily="system-ui, sans-serif">Settings</text>
 
-                  {/* Divider line */}
-                  <line x1="200" y1="55" x2="900" y2="55" stroke="#1a1a1f" strokeWidth="1" />
+                  {/* ── Main content (x: 200–900) ── */}
+                  {/* Topbar */}
+                  <text x="212" y="31" fill="#e4e4e7" fontSize="14" fontWeight="700" fontFamily="system-ui, sans-serif" letterSpacing="-0.4">Dashboard</text>
+                  {/* Team selector */}
+                  <rect x="358" y="14" width="106" height="22" rx="5" fill="#1e1e24"/>
+                  <text x="366" y="29" fill="#666" fontSize="9.5" fontFamily="system-ui, sans-serif">Platform team ▾</text>
+                  {/* Sprint selector */}
+                  <rect x="472" y="14" width="76" height="22" rx="5" fill="#1e1e24"/>
+                  <text x="480" y="29" fill="#666" fontSize="9.5" fontFamily="system-ui, sans-serif">Sprint 18 ▾</text>
+                  {/* Topbar divider */}
+                  <line x1="200" y1="46" x2="900" y2="46" stroke="#1a1a1f" strokeWidth="1"/>
 
-                  {/* Metric cards row */}
-                  {/* Card 1: Velocity */}
-                  <rect
-                    x="212"
-                    y="72"
-                    width="200"
-                    height="96"
-                    rx="10"
-                    fill="#111113"
-                    stroke="#1e1e24"
-                    strokeWidth="1"
-                  />
-                  <text
-                    x="230"
-                    y="98"
-                    fill="#555560"
-                    fontSize="10"
-                    fontFamily="system-ui, sans-serif"
-                    fontWeight="600"
-                    letterSpacing="0.06em"
-                  >
-                    VELOCITY
-                  </text>
-                  <text
-                    x="230"
-                    y="132"
-                    fill="#e4e4e7"
-                    fontSize="28"
-                    fontWeight="800"
-                    fontFamily="system-ui, sans-serif"
-                    letterSpacing="-1"
-                  >
-                    84
-                  </text>
-                  <text x="270" y="132" fill="#3e9c58" fontSize="12" fontFamily="system-ui, sans-serif">
-                    ↑ 12%
-                  </text>
-                  <text x="230" y="152" fill="#444450" fontSize="10" fontFamily="system-ui, sans-serif">
-                    vs last sprint
-                  </text>
+                  {/* ── Row 1: Cycle Overview (x208–683, y54–156) & Delivery (x695–887, y54–156) ── */}
 
-                  {/* Card 2: Morale */}
-                  <rect
-                    x="428"
-                    y="72"
-                    width="200"
-                    height="96"
-                    rx="10"
-                    fill="#111113"
-                    stroke="#1e1e24"
-                    strokeWidth="1"
-                  />
-                  <text
-                    x="446"
-                    y="98"
-                    fill="#555560"
-                    fontSize="10"
-                    fontFamily="system-ui, sans-serif"
-                    fontWeight="600"
-                    letterSpacing="0.06em"
-                  >
-                    MORALE
-                  </text>
-                  <text
-                    x="446"
-                    y="132"
-                    fill="#e4e4e7"
-                    fontSize="28"
-                    fontWeight="800"
-                    fontFamily="system-ui, sans-serif"
-                    letterSpacing="-1"
-                  >
-                    7.2
-                  </text>
-                  <text x="486" y="132" fill="#3e9c58" fontSize="12" fontFamily="system-ui, sans-serif">
-                    ↑ 0.4
-                  </text>
-                  <text x="446" y="152" fill="#444450" fontSize="10" fontFamily="system-ui, sans-serif">
-                    team avg (10 max)
-                  </text>
+                  {/* Cycle Overview widget */}
+                  <rect x="208" y="54" width="475" height="102" rx="8" fill="#111113" stroke="#1e1e24" strokeWidth="1"/>
+                  <text x="222" y="73" fill="#555560" fontSize="8.5" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="0.08em">CYCLE OVERVIEW · SPRINT 18</text>
+                  {/* 5 evenly-spaced metric columns — x: 222, 315, 408, 501, 594 */}
+                  {([
+                    ["Total",         "42", "#e4e4e7", 222,   0],
+                    ["In Progress",   "11", "#c97a28", 315, -14],
+                    ["Completed",     "27", "#3e9c58", 408, -14],
+                    ["High Priority",  "6", "#e4e4e7", 501, -14],
+                    ["Overdue",        "3", "#d95757", 594,   0],
+                  ] as [string, string, string, number, number][]).map(([label, val, color, x, lOff]) => (
+                    <g key={label}>
+                      <text x={x} y={110} fill={color} fontSize="21" fontWeight="800" fontFamily="system-ui, sans-serif" letterSpacing="-0.5">{val}</text>
+                      <text x={x + lOff} y={143} fill="#444450" fontSize="8.5" fontFamily="system-ui, sans-serif">{label}</text>
+                    </g>
+                  ))}
+                  {/* Column dividers — midpoints between col x values */}
+                  {[269, 362, 455, 548].map(x => (
+                    <line key={x} x1={x} y1="84" x2={x} y2="148" stroke="#1e1e24" strokeWidth="1"/>
+                  ))}
 
-                  {/* Card 3: Issues */}
-                  <rect
-                    x="644"
-                    y="72"
-                    width="200"
-                    height="96"
-                    rx="10"
-                    fill="#111113"
-                    stroke="#1e1e24"
-                    strokeWidth="1"
-                  />
-                  <text
-                    x="662"
-                    y="98"
-                    fill="#555560"
-                    fontSize="10"
-                    fontFamily="system-ui, sans-serif"
-                    fontWeight="600"
-                    letterSpacing="0.06em"
-                  >
-                    OPEN ISSUES
-                  </text>
-                  <text
-                    x="662"
-                    y="132"
-                    fill="#e4e4e7"
-                    fontSize="28"
-                    fontWeight="800"
-                    fontFamily="system-ui, sans-serif"
-                    letterSpacing="-1"
-                  >
-                    23
-                  </text>
-                  <text x="700" y="132" fill="#c97a28" fontSize="12" fontFamily="system-ui, sans-serif">
-                    ↑ 5
-                  </text>
-                  <text x="662" y="152" fill="#444450" fontSize="10" fontFamily="system-ui, sans-serif">
-                    needs triage
-                  </text>
+                  {/* Delivery widget */}
+                  <rect x="695" y="54" width="193" height="102" rx="8" fill="#111113" stroke="#1e1e24" strokeWidth="1"/>
+                  <text x="709" y="73" fill="#555560" fontSize="8.5" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="0.08em">DELIVERY</text>
+                  {/* Bars — all anchored to bottom baseline y=144, heights 16–40px */}
+                  {([
+                    [711, 18, "#3e9c58"],
+                    [727, 25, "#3e9c58"],
+                    [743, 32, "#3e9c58"],
+                    [759, 21, "#3e9c58"],
+                    [775, 36, "#3e9c58"],
+                    [791, 28, "#3e9c58"],
+                    [807, 40, "#5e6ad2"],
+                  ] as [number, number, string][]).map(([x, h, fill], i) => (
+                    <rect key={i} x={x} y={133 - h} width="10" height={h} rx="2" fill={fill} opacity="0.85"/>
+                  ))}
+                  <text x="709" y="147" fill="#3e9c58" fontSize="9" fontFamily="system-ui, sans-serif">↑ 18% vs last sprint</text>
 
-                  {/* Team health table */}
-                  <text
-                    x="212"
-                    y="194"
-                    fill="#555560"
-                    fontSize="10"
-                    fontFamily="system-ui, sans-serif"
-                    fontWeight="600"
-                    letterSpacing="0.06em"
-                  >
-                    TEAM HEALTH
-                  </text>
+                  {/* ── Row 2: Team Health (x208–683, y166–322) & Resource Alloc (x695–887, y166–322) ── */}
 
-                  {/* Row headers */}
-                  <text x="212" y="220" fill="#888890" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Member
-                  </text>
-                  <text x="420" y="220" fill="#888890" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Workload
-                  </text>
-                  <text x="590" y="220" fill="#888890" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Mood
-                  </text>
-                  <text x="720" y="220" fill="#888890" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Next 1:1
-                  </text>
-                  <line x1="200" y1="228" x2="890" y2="228" stroke="#1a1a1f" strokeWidth="1" />
+                  {/* Team Health widget */}
+                  <rect x="208" y="166" width="475" height="156" rx="8" fill="#111113" stroke="#1e1e24" strokeWidth="1"/>
+                  <text x="222" y="184" fill="#555560" fontSize="8.5" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="0.08em">TEAM HEALTH</text>
+                  {/* Column headers */}
+                  <text x="248" y="202" fill="#3a3a46" fontSize="9" fontFamily="system-ui, sans-serif">Member</text>
+                  <text x="382" y="202" fill="#3a3a46" fontSize="9" fontFamily="system-ui, sans-serif">Workload</text>
+                  <text x="508" y="202" fill="#3a3a46" fontSize="9" fontFamily="system-ui, sans-serif">Mood</text>
+                  <text x="590" y="202" fill="#3a3a46" fontSize="9" fontFamily="system-ui, sans-serif">Next 1:1</text>
+                  <line x1="208" y1="208" x2="683" y2="208" stroke="#1e1e24" strokeWidth="1"/>
 
-                  {/* Row 1 */}
-                  <circle cx="226" cy="249" r="11" fill="#2a2a35" />
-                  <text x="221" y="253" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    AY
-                  </text>
-                  <text x="244" y="253" fill="#cccccc" fontSize="11.5" fontFamily="system-ui, sans-serif">
-                    Aiko Yamamoto
-                  </text>
-                  {/* Workload bar */}
-                  <rect x="410" y="242" width="120" height="8" rx="4" fill="#1e1e24" />
-                  <rect x="410" y="242" width="84" height="8" rx="4" fill="#4a7c59" opacity="0.9" />
-                  <text x="540" y="252" fill="#888" fontSize="10" fontFamily="system-ui, sans-serif">
-                    70%
-                  </text>
-                  {/* Mood dots */}
-                  <circle cx="595" cy="248" r="4" fill="#3e9c58" />
-                  <circle cx="608" cy="248" r="4" fill="#3e9c58" />
-                  <circle cx="621" cy="248" r="4" fill="#3e9c58" />
-                  <circle cx="634" cy="248" r="4" fill="#3e9c58" />
-                  <circle cx="647" cy="248" r="4" fill="#1e1e24" />
-                  <text x="715" y="252" fill="#555560" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Thu Apr 10
-                  </text>
+                  {/* Row 1 — Aiko Y. */}
+                  <circle cx="230" cy="228" r="9" fill="#2a2a35"/>
+                  <text x="225" y="232" fill="#666" fontSize="8" fontFamily="system-ui, sans-serif">AY</text>
+                  <text x="245" y="232" fill="#ccc" fontSize="10" fontFamily="system-ui, sans-serif">Aiko Y.</text>
+                  <rect x="378" y="224" width="90" height="6" rx="3" fill="#1e1e24"/>
+                  <rect x="378" y="224" width="63" height="6" rx="3" fill="#4a7c59" opacity="0.9"/>
+                  <text x="474" y="231" fill="#555" fontSize="8.5" fontFamily="system-ui, sans-serif">70%</text>
+                  <circle cx="510" cy="228" r="3.5" fill="#3e9c58"/>
+                  <circle cx="522" cy="228" r="3.5" fill="#3e9c58"/>
+                  <circle cx="534" cy="228" r="3.5" fill="#3e9c58"/>
+                  <circle cx="546" cy="228" r="3.5" fill="#3e9c58"/>
+                  <circle cx="558" cy="228" r="3.5" fill="#1e1e24"/>
+                  <text x="588" y="232" fill="#555560" fontSize="9" fontFamily="system-ui, sans-serif">Apr 10</text>
+                  <line x1="208" y1="242" x2="683" y2="242" stroke="#1e1e24" strokeWidth="1"/>
 
-                  {/* Row 2 */}
-                  <line x1="200" y1="264" x2="890" y2="264" stroke="#1a1a1f" strokeWidth="1" />
-                  <circle cx="226" cy="285" r="11" fill="#2a2a35" />
-                  <text x="221" y="289" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    ML
-                  </text>
-                  <text x="244" y="289" fill="#cccccc" fontSize="11.5" fontFamily="system-ui, sans-serif">
-                    Marcus Li
-                  </text>
-                  <rect x="410" y="278" width="120" height="8" rx="4" fill="#1e1e24" />
-                  <rect x="410" y="278" width="102" height="8" rx="4" fill="#c97a28" opacity="0.8" />
-                  <text x="540" y="288" fill="#888" fontSize="10" fontFamily="system-ui, sans-serif">
-                    85%
-                  </text>
-                  <circle cx="595" cy="284" r="4" fill="#3e9c58" />
-                  <circle cx="608" cy="284" r="4" fill="#3e9c58" />
-                  <circle cx="621" cy="284" r="4" fill="#3e9c58" />
-                  <circle cx="634" cy="284" r="4" fill="#1e1e24" />
-                  <circle cx="647" cy="284" r="4" fill="#1e1e24" />
-                  <text x="715" y="288" fill="#555560" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Fri Apr 11
-                  </text>
+                  {/* Row 2 — Marcus L. */}
+                  <circle cx="230" cy="260" r="9" fill="#2a2a35"/>
+                  <text x="224" y="264" fill="#666" fontSize="8" fontFamily="system-ui, sans-serif">ML</text>
+                  <text x="245" y="264" fill="#ccc" fontSize="10" fontFamily="system-ui, sans-serif">Marcus L.</text>
+                  <rect x="378" y="256" width="90" height="6" rx="3" fill="#1e1e24"/>
+                  <rect x="378" y="256" width="77" height="6" rx="3" fill="#c97a28" opacity="0.8"/>
+                  <text x="474" y="263" fill="#555" fontSize="8.5" fontFamily="system-ui, sans-serif">86%</text>
+                  <circle cx="510" cy="260" r="3.5" fill="#3e9c58"/>
+                  <circle cx="522" cy="260" r="3.5" fill="#3e9c58"/>
+                  <circle cx="534" cy="260" r="3.5" fill="#3e9c58"/>
+                  <circle cx="546" cy="260" r="3.5" fill="#1e1e24"/>
+                  <circle cx="558" cy="260" r="3.5" fill="#1e1e24"/>
+                  <text x="588" y="264" fill="#555560" fontSize="9" fontFamily="system-ui, sans-serif">Apr 11</text>
+                  <line x1="208" y1="274" x2="683" y2="274" stroke="#1e1e24" strokeWidth="1"/>
 
-                  {/* Row 3 */}
-                  <line x1="200" y1="300" x2="890" y2="300" stroke="#1a1a1f" strokeWidth="1" />
-                  <circle cx="226" cy="321" r="11" fill="#2a2a35" />
-                  <text x="222" y="325" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    SK
-                  </text>
-                  <text x="244" y="325" fill="#cccccc" fontSize="11.5" fontFamily="system-ui, sans-serif">
-                    Sara Kim
-                  </text>
-                  <rect x="410" y="314" width="120" height="8" rx="4" fill="#1e1e24" />
-                  <rect x="410" y="314" width="66" height="8" rx="4" fill="#4a7c59" opacity="0.9" />
-                  <text x="540" y="324" fill="#888" fontSize="10" fontFamily="system-ui, sans-serif">
-                    55%
-                  </text>
-                  <circle cx="595" cy="320" r="4" fill="#3e9c58" />
-                  <circle cx="608" cy="320" r="4" fill="#3e9c58" />
-                  <circle cx="621" cy="320" r="4" fill="#3e9c58" />
-                  <circle cx="634" cy="320" r="4" fill="#3e9c58" />
-                  <circle cx="647" cy="320" r="4" fill="#3e9c58" />
-                  <text x="715" y="324" fill="#555560" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Wed Apr 9
-                  </text>
+                  {/* Row 3 — Sara K. */}
+                  <circle cx="230" cy="292" r="9" fill="#2a2a35"/>
+                  <text x="225" y="296" fill="#666" fontSize="8" fontFamily="system-ui, sans-serif">SK</text>
+                  <text x="245" y="296" fill="#ccc" fontSize="10" fontFamily="system-ui, sans-serif">Sara K.</text>
+                  <rect x="378" y="288" width="90" height="6" rx="3" fill="#1e1e24"/>
+                  <rect x="378" y="288" width="50" height="6" rx="3" fill="#4a7c59" opacity="0.9"/>
+                  <text x="474" y="295" fill="#555" fontSize="8.5" fontFamily="system-ui, sans-serif">55%</text>
+                  <circle cx="510" cy="292" r="3.5" fill="#3e9c58"/>
+                  <circle cx="522" cy="292" r="3.5" fill="#3e9c58"/>
+                  <circle cx="534" cy="292" r="3.5" fill="#3e9c58"/>
+                  <circle cx="546" cy="292" r="3.5" fill="#3e9c58"/>
+                  <circle cx="558" cy="292" r="3.5" fill="#3e9c58"/>
+                  <text x="588" y="296" fill="#555560" fontSize="9" fontFamily="system-ui, sans-serif">Apr 9</text>
 
-                  {/* Row 4 */}
-                  <line x1="200" y1="336" x2="890" y2="336" stroke="#1a1a1f" strokeWidth="1" />
-                  <circle cx="226" cy="357" r="11" fill="#2a2a35" />
-                  <text x="222" y="361" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    JR
-                  </text>
-                  <text x="244" y="357" fill="#cccccc" fontSize="11.5" fontFamily="system-ui, sans-serif">
-                    James R.
-                  </text>
-                  <rect x="410" y="350" width="120" height="8" rx="4" fill="#1e1e24" />
-                  <rect x="410" y="350" width="90" height="8" rx="4" fill="#4a7c59" opacity="0.9" />
-                  <text x="540" y="360" fill="#888" fontSize="10" fontFamily="system-ui, sans-serif">
-                    75%
-                  </text>
-                  <circle cx="595" cy="356" r="4" fill="#3e9c58" />
-                  <circle cx="608" cy="356" r="4" fill="#3e9c58" />
-                  <circle cx="621" cy="356" r="4" fill="#1e1e24" />
-                  <circle cx="634" cy="356" r="4" fill="#1e1e24" />
-                  <circle cx="647" cy="356" r="4" fill="#1e1e24" />
-                  <text x="715" y="360" fill="#555560" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Mon Apr 14
-                  </text>
+                  {/* Resource Allocation widget */}
+                  <rect x="695" y="166" width="193" height="156" rx="8" fill="#111113" stroke="#1e1e24" strokeWidth="1"/>
+                  <text x="709" y="184" fill="#555560" fontSize="8.5" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="0.08em">RESOURCE ALLOC.</text>
+                  {/* Donut — cx=792, cy=252, r=36, strokeWidth=14. Circumference≈226. */}
+                  {/* Features 60% → 136, Bugs 32% → 72, Other 8% → 18 */}
+                  <circle cx="792" cy="249" r="36" fill="none" stroke="#5e6ad2" strokeWidth="14" strokeDasharray="136 90" strokeDashoffset="0" opacity="0.9"/>
+                  <circle cx="792" cy="249" r="36" fill="none" stroke="#3e9c58" strokeWidth="14" strokeDasharray="72 154" strokeDashoffset="-136" opacity="0.9"/>
+                  <circle cx="792" cy="249" r="36" fill="none" stroke="#c97a28" strokeWidth="14" strokeDasharray="18 208" strokeDashoffset="-208" opacity="0.9"/>
+                  {/* Centre label */}
+                  <text x="781" y="246" fill="#e4e4e7" fontSize="12" fontWeight="700" fontFamily="system-ui, sans-serif">60%</text>
+                  <text x="776" y="258" fill="#555560" fontSize="8" fontFamily="system-ui, sans-serif">features</text>
+                  {/* Legend — sits below donut, within widget bottom (166+156=322) */}
+                  <rect x="709" y="296" width="7" height="7" rx="2" fill="#5e6ad2"/>
+                  <text x="720" y="303" fill="#888" fontSize="8.5" fontFamily="system-ui, sans-serif">Features 60%</text>
+                  <rect x="709" y="308" width="7" height="7" rx="2" fill="#3e9c58"/>
+                  <text x="720" y="315" fill="#888" fontSize="8.5" fontFamily="system-ui, sans-serif">Bugs 32%</text>
 
-                  {/* Standup widget bottom */}
-                  <rect
-                    x="212"
-                    y="390"
-                    width="670"
-                    height="110"
-                    rx="10"
-                    fill="#111113"
-                    stroke="#1e1e24"
-                    strokeWidth="1"
-                  />
-                  <text
-                    x="232"
-                    y="415"
-                    fill="#555560"
-                    fontSize="10"
-                    fontFamily="system-ui, sans-serif"
-                    fontWeight="600"
-                    letterSpacing="0.06em"
-                  >
-                    RECENT STANDUPS
-                  </text>
-                  <circle cx="248" cy="440" r="10" fill="#2a2a35" />
-                  <text x="244" y="444" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    AY
-                  </text>
-                  <text x="266" y="437" fill="#cccccc" fontSize="11" fontFamily="system-ui, sans-serif">
-                    Aiko Yamamoto · 9:03 AM
-                  </text>
-                  <text x="266" y="453" fill="#555560" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Working on the integrations pipeline. Blocked on Linear webhook setup.
-                  </text>
-                  <circle cx="248" cy="478" r="10" fill="#2a2a35" />
-                  <text x="244" y="482" fill="#888" fontSize="9" fontFamily="system-ui, sans-serif">
-                    ML
-                  </text>
-                  <text x="266" y="474" fill="#cccccc" fontSize="11" fontFamily="system-ui, sans-serif">
-                    Marcus Li · 9:15 AM
-                  </text>
-                  <text x="266" y="490" fill="#555560" fontSize="10.5" fontFamily="system-ui, sans-serif">
-                    Finished the dashboard refactor. Reviewing Sara&apos;s PR this afternoon.
-                  </text>
+                  {/* ── Row 3: Hygiene (x208–503, y334–450) & Action Items (x515–887, y334–450) ── */}
+
+                  {/* Hygiene Snapshot widget */}
+                  <rect x="208" y="334" width="295" height="116" rx="8" fill="#111113" stroke="#1e1e24" strokeWidth="1"/>
+                  <text x="222" y="353" fill="#555560" fontSize="8.5" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="0.08em">HYGIENE SNAPSHOT</text>
+                  <text x="222" y="378" fill="#d95757" fontSize="10" fontFamily="system-ui, sans-serif">⚠ 8 issues missing priority</text>
+                  <text x="222" y="396" fill="#c97a28" fontSize="10" fontFamily="system-ui, sans-serif">⚠ 5 issues no estimate</text>
+                  <text x="222" y="414" fill="#3e9c58" fontSize="10" fontFamily="system-ui, sans-serif">✓ Backlog trending cleaner</text>
+                  <text x="222" y="438" fill="#444450" fontSize="8.5" fontFamily="system-ui, sans-serif">Last checked 4 min ago</text>
+
+                  {/* My Action Items widget */}
+                  <rect x="515" y="334" width="373" height="116" rx="8" fill="#111113" stroke="#1e1e24" strokeWidth="1"/>
+                  <text x="529" y="353" fill="#555560" fontSize="8.5" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="0.08em">MY ACTION ITEMS</text>
+                  {/* Item 1 */}
+                  <rect x="529" y="364" width="9" height="9" rx="2" fill="#1e1e24" stroke="#2a2a35" strokeWidth="1"/>
+                  <text x="544" y="373" fill="#cccccc" fontSize="9.5" fontFamily="system-ui, sans-serif">Follow up with Marcus on capacity</text>
+                  {/* Item 2 */}
+                  <rect x="529" y="381" width="9" height="9" rx="2" fill="#1e1e24" stroke="#2a2a35" strokeWidth="1"/>
+                  <text x="544" y="390" fill="#cccccc" fontSize="9.5" fontFamily="system-ui, sans-serif">Review Sara&apos;s architecture proposal</text>
+                  {/* Item 3 — completed */}
+                  <rect x="529" y="398" width="9" height="9" rx="2" fill="#3e9c58"/>
+                  <text x="544" y="407" fill="#44444e" fontSize="9.5" fontFamily="system-ui, sans-serif" textDecoration="line-through">Share sprint retro notes</text>
+                  {/* Footer */}
+                  <text x="529" y="436" fill="#444450" fontSize="8.5" fontFamily="system-ui, sans-serif">3 open · 1 completed · from 1:1 with Marcus</text>
                 </svg>
               </div>
             </div>
@@ -541,34 +305,37 @@ export default function PortfolioPage() {
             <div className="portfolio-features-grid">
               <div className="portfolio-feature-card">
                 <IconBox icon={Layout} />
-                <h3>Team Health Dashboard</h3>
+                <h3>Customisable dashboard</h3>
                 <p>
-                  Real-time visibility into workload, morale, and velocity for
-                  every member of your team.
+                  Cycle overview, delivery throughput, team health, resource allocation,
+                  hygiene snapshot, action items, and watchlist — all in one view,
+                  ordered the way you work.
                 </p>
               </div>
               <div className="portfolio-feature-card">
                 <IconBox icon={Users} />
-                <h3>Structured 1:1s</h3>
+                <h3>1:1 workspace</h3>
                 <p>
-                  Pre-built agendas, persistent notes, and action items that
-                  carry forward between meetings.
+                  Shared notes, a private scratchpad, talking points, commitment tracking,
+                  and a full session timeline per engineer. Every 1:1 starts with context.
                 </p>
               </div>
               <div className="portfolio-feature-card">
                 <IconBox icon={BarChart2} />
-                <h3>Cycle Tracking</h3>
+                <h3>Cycle &amp; project analytics</h3>
                 <p>
-                  Sprint-level visibility tied to real people — see who&apos;s
-                  overloaded, who has capacity, and what&apos;s at risk.
+                  Burndown charts, issue distribution, velocity trends, milestone tracking,
+                  and resource allocation — pulled live from Linear, surfaced for the EM,
+                  not the engineer.
                 </p>
               </div>
               <div className="portfolio-feature-card">
-                <IconBox icon={Cpu} />
-                <h3>Linear Integration</h3>
+                <IconBox icon={Bell} />
+                <h3>Standup &amp; Watchlist</h3>
                 <p>
-                  Issues and team activity in one place. Not a second inbox — a
-                  smarter view of what&apos;s actually happening.
+                  A structured standup flow with blocker tracking and action items. A
+                  Watchlist for the issues you can&apos;t afford to lose sight of, with a
+                  live event timeline per issue.
                 </p>
               </div>
             </div>
@@ -577,9 +344,11 @@ export default function PortfolioPage() {
             <div className="portfolio-product-meta">
               <div className="tag-row">
                 <span className="tag">Next.js</span>
-                <span className="tag">TypeScript</span>
-                <span className="tag">PostgreSQL</span>
+                <span className="tag">Prisma + PostgreSQL</span>
+                <span className="tag">Supabase</span>
                 <span className="tag">Linear API</span>
+                <span className="tag">Stripe</span>
+                <span className="tag">NextAuth</span>
               </div>
               <a
                 href="https://usepulsr.com"
@@ -587,7 +356,7 @@ export default function PortfolioPage() {
                 rel="noopener noreferrer"
                 className="tag tag--link"
               >
-                Beta · usepulsr.com <ArrowUpRight size={12} />
+                Live · usepulsr.com <ArrowUpRight size={12} />
               </a>
             </div>
           </div>
